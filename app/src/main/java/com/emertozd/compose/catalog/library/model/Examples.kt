@@ -21,7 +21,6 @@ package com.emertozd.compose.catalog.library.model
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.material3.adaptive.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -43,6 +42,7 @@ import com.emertozd.compose.catalog.samples.ButtonSample
 import com.emertozd.compose.catalog.samples.ButtonWithAnimatedShapeSample
 import com.emertozd.compose.catalog.samples.ButtonWithIconSample
 import com.emertozd.compose.catalog.samples.CardSample
+import com.emertozd.compose.catalog.samples.CarouselWithShowAllButtonSample
 import com.emertozd.compose.catalog.samples.CenteredHorizontalFloatingToolbarWithFabSample
 import com.emertozd.compose.catalog.samples.CenteredSliderSample
 import com.emertozd.compose.catalog.samples.CenteredVerticalFloatingToolbarWithFabSample
@@ -112,6 +112,7 @@ import com.emertozd.compose.catalog.samples.FilterChipWithLeadingIconSample
 import com.emertozd.compose.catalog.samples.FloatingActionButtonMenuSample
 import com.emertozd.compose.catalog.samples.FloatingActionButtonSample
 import com.emertozd.compose.catalog.samples.FullScreenSearchBarScaffoldSample
+import com.emertozd.compose.catalog.samples.HorizontalCenteredHeroCarouselSample
 import com.emertozd.compose.catalog.samples.HorizontalFloatingToolbarAsScaffoldFabSample
 import com.emertozd.compose.catalog.samples.HorizontalFloatingToolbarWithFabSample
 import com.emertozd.compose.catalog.samples.HorizontalMultiBrowseCarouselSample
@@ -153,7 +154,7 @@ import com.emertozd.compose.catalog.samples.ModalBottomSheetSample
 import com.emertozd.compose.catalog.samples.ModalNavigationDrawerSample
 import com.emertozd.compose.catalog.samples.ModalWideNavigationRailSample
 import com.emertozd.compose.catalog.samples.MultiAutocompleteExposedDropdownMenuSample
-import com.emertozd.compose.catalog.samples.MultiSelectConnectedButtonGroupSample
+import com.emertozd.compose.catalog.samples.MultiSelectConnectedButtonGroupWithFlowLayoutSample
 import com.emertozd.compose.catalog.samples.NavigableListDetailPaneScaffoldSample
 import com.emertozd.compose.catalog.samples.NavigationBarItemWithBadge
 import com.emertozd.compose.catalog.samples.NavigationBarSample
@@ -223,7 +224,6 @@ import com.emertozd.compose.catalog.samples.SimpleTextFieldSample
 import com.emertozd.compose.catalog.samples.SimpleTopAppBar
 import com.emertozd.compose.catalog.samples.SimpleTopAppBarWithAdaptiveActions
 import com.emertozd.compose.catalog.samples.SimpleTopAppBarWithSubtitle
-import com.emertozd.compose.catalog.samples.SingleSelectConnectedButtonGroupSample
 import com.emertozd.compose.catalog.samples.SingleSelectConnectedButtonGroupWithFlowLayoutSample
 import com.emertozd.compose.catalog.samples.SliderSample
 import com.emertozd.compose.catalog.samples.SliderWithCustomThumbSample
@@ -520,14 +520,6 @@ val ButtonGroupsExamples =
             ButtonGroupSample()
         },
         Example(
-            name = "SingleSelectConnectedButtonGroupSample",
-            description = ButtonGroupsExampleDescription,
-            sourceUrl = ButtonGroupsExampleSourceUrl,
-            isExpressive = true,
-        ) {
-            SingleSelectConnectedButtonGroupSample()
-        },
-        Example(
             name = "SingleSelectConnectedButtonGroupWithFlowLayoutSample",
             description = ButtonGroupsExampleDescription,
             sourceUrl = ButtonGroupsExampleSourceUrl,
@@ -536,12 +528,12 @@ val ButtonGroupsExamples =
             SingleSelectConnectedButtonGroupWithFlowLayoutSample()
         },
         Example(
-            name = "MultiSelectConnectedButtonGroupSample",
+            name = "MultiSelectConnectedButtonGroupWithFlowLayoutSample",
             description = ButtonGroupsExampleDescription,
             sourceUrl = ButtonGroupsExampleSourceUrl,
             isExpressive = true,
         ) {
-            MultiSelectConnectedButtonGroupSample()
+            MultiSelectConnectedButtonGroupWithFlowLayoutSample()
         },
     )
 
@@ -620,12 +612,28 @@ val CarouselExamples =
             HorizontalUncontainedCarouselSample()
         },
         Example(
+            name = "HorizontalCenteredHeroCarouselSample",
+            description = CarouselExampleDescription,
+            sourceUrl = CarouselExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            HorizontalCenteredHeroCarouselSample()
+        },
+        Example(
             name = "FadingHorizontalMultiBrowseCarouselSample",
             description = CarouselExampleDescription,
             sourceUrl = CarouselExampleSourceUrl,
             isExpressive = false,
         ) {
             FadingHorizontalMultiBrowseCarouselSample()
+        },
+        Example(
+            name = "CarouselWithShowAllButtonSample",
+            description = CarouselExampleDescription,
+            sourceUrl = CarouselExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            CarouselWithShowAllButtonSample()
         },
     )
 
