@@ -16,7 +16,6 @@
 
 package com.emertozd.compose.catalog.samples
 
-import com.emertozd.compose.catalog.library.Sampled
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.AnimationVector1D
@@ -42,6 +41,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LeadingIconTab
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.PlainTooltip
 import androidx.compose.material3.PrimaryScrollableTabRow
 import androidx.compose.material3.PrimaryTabRow
 import androidx.compose.material3.SecondaryScrollableTabRow
@@ -50,6 +50,10 @@ import androidx.compose.material3.Tab
 import androidx.compose.material3.TabIndicatorScope
 import androidx.compose.material3.TabPosition
 import androidx.compose.material3.Text
+import androidx.compose.material3.TooltipAnchorPosition
+import androidx.compose.material3.TooltipBox
+import androidx.compose.material3.TooltipDefaults
+import androidx.compose.material3.rememberTooltipState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -68,6 +72,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.emertozd.compose.catalog.library.Sampled
 import kotlinx.coroutines.launch
 
 @Preview
@@ -104,13 +109,28 @@ fun PrimaryIconTabs() {
     Column {
         PrimaryTabRow(selectedTabIndex = state) {
             icons.forEachIndexed { index, icon ->
-                Tab(
-                    selected = state == index,
-                    onClick = { state = index },
-                    icon = { Icon(icon, contentDescription = "Favorite") },
-                )
+                // Icon-only tab should have a tooltip associated with it.
+                TooltipBox(
+                    positionProvider =
+                        TooltipDefaults.rememberTooltipPositionProvider(
+                            TooltipAnchorPosition.Above
+                        ),
+                    tooltip = { PlainTooltip { Text("Favorite") } },
+                    state = rememberTooltipState(),
+                ) {
+                    Tab(
+                        selected = state == index,
+                        onClick = { state = index },
+                        icon = { Icon(icon, contentDescription = "Favorite") },
+                    )
+                }
             }
         }
+        Text(
+            modifier = Modifier.align(Alignment.CenterHorizontally),
+            text = "Icon tab ${state + 1} selected",
+            style = MaterialTheme.typography.bodyLarge,
+        )
     }
 }
 
@@ -173,11 +193,21 @@ fun SecondaryIconTabs() {
     Column {
         SecondaryTabRow(selectedTabIndex = state) {
             icons.forEachIndexed { index, icon ->
-                Tab(
-                    selected = state == index,
-                    onClick = { state = index },
-                    icon = { Icon(icon, contentDescription = "Favorite") },
-                )
+                // Icon-only tab should have a tooltip associated with it.
+                TooltipBox(
+                    positionProvider =
+                        TooltipDefaults.rememberTooltipPositionProvider(
+                            TooltipAnchorPosition.Above
+                        ),
+                    tooltip = { PlainTooltip { Text("Favorite") } },
+                    state = rememberTooltipState(),
+                ) {
+                    Tab(
+                        selected = state == index,
+                        onClick = { state = index },
+                        icon = { Icon(icon, contentDescription = "Favorite") },
+                    )
+                }
             }
         }
         Text(

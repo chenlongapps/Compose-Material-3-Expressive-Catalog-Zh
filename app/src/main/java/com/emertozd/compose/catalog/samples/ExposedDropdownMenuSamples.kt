@@ -25,9 +25,9 @@ import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.foundation.text.input.insert
 import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.foundation.text.input.setTextAndPlaceCursorAtEnd
-import com.emertozd.compose.catalog.library.Sampled
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
@@ -44,13 +44,14 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.substring
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.emertozd.compose.catalog.library.Sampled
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Preview
 @Sampled
 @Composable
@@ -58,6 +59,7 @@ fun ExposedDropdownMenuSample() {
     val options: List<String> = SampleData.take(5)
     var expanded by remember { mutableStateOf(false) }
     val textFieldState = rememberTextFieldState(options[0])
+    var checkedIndex: Int? by remember { mutableStateOf(null) }
 
     ExposedDropdownMenuBox(expanded = expanded, onExpandedChange = { expanded = it }) {
         TextField(
@@ -258,6 +260,7 @@ private fun List<String>.filteredBy(text: CharSequence): List<AnnotatedString> {
 private val SampleData =
     listOf(
         "Android",
+        "Baklava",
         "Base",
         "Cupcake",
         "Donut",

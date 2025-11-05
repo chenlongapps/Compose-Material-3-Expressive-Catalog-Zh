@@ -16,7 +16,6 @@
 
 package com.emertozd.compose.catalog.samples
 
-import com.emertozd.compose.catalog.library.Sampled
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -64,6 +63,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEachIndexed
+import com.emertozd.compose.catalog.library.Sampled
 
 @Preview
 @Sampled
@@ -174,6 +174,37 @@ fun FilterChipWithLeadingIconSample() {
                     )
                 }
             },
+    )
+}
+
+@Preview
+@Sampled
+@Composable
+fun FilterChipWithTrailingIconSample() {
+    var selected by remember { mutableStateOf(false) }
+    FilterChip(
+        selected = selected,
+        onClick = { selected = !selected },
+        label = { Text("Filter chip") },
+        leadingIcon =
+            if (selected) {
+                {
+                    Icon(
+                        imageVector = Icons.Filled.Done,
+                        contentDescription = "Localized Description",
+                        modifier = Modifier.size(FilterChipDefaults.IconSize),
+                    )
+                }
+            } else {
+                null
+            },
+        trailingIcon = {
+            Icon(
+                imageVector = Icons.Filled.ArrowDropDown,
+                contentDescription = "Localized Description",
+                modifier = Modifier.size(FilterChipDefaults.IconSize),
+            )
+        },
     )
 }
 

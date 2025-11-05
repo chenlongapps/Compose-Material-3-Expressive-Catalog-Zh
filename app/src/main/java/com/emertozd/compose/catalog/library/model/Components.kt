@@ -17,7 +17,6 @@
 package com.emertozd.compose.catalog.library.model
 
 import androidx.annotation.DrawableRes
-import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import com.emertozd.compose.catalog.R
 import com.emertozd.compose.catalog.library.util.AdaptiveGuidelinesUrl
 import com.emertozd.compose.catalog.library.util.AdaptiveNavigationSuiteMaterial3SourceUrl
@@ -52,7 +51,6 @@ private var nextId: Int = 1
 private fun nextId(): Int = nextId.also { nextId += 1 }
 
 // Components are ordered alphabetically by name.
-
 private val Adaptive =
     Component(
         id = nextId(),
@@ -578,7 +576,21 @@ private val MaterialShapes =
         docsUrl = "$PackageSummaryUrl#shapes",
         sourceUrl = "$Material3SourceUrl/Shapes.kt",
         examples = MaterialShapesExamples,
-        additionalInfo = "Unofficial"
+        additionalInfo = "Unofficial",
+    )
+
+
+private val SwipeToDismiss =
+    Component(
+        id = nextId(),
+        name = "Swipe to Dismiss",
+        description = "Swipe to dismiss is a gesture used to dismiss items in a list.",
+        // No material shapes icon
+        guidelinesUrl = "$ComponentGuidelinesUrl/material-shapes",
+        docsUrl = "$PackageSummaryUrl#shapes",
+        sourceUrl = "$Material3SourceUrl/Shapes.kt",
+        examples = SwipeToDismissExamples,
+        additionalInfo = "Unofficial",
     )
 
 /** Components for the catalog, ordered alphabetically by name. */
@@ -624,4 +636,5 @@ val Components =
         Tooltips,
         TopAppBar,
         MaterialShapes,
+        SwipeToDismiss
     )

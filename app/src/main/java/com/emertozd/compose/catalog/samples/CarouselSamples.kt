@@ -303,7 +303,7 @@ fun FadingHorizontalMultiBrowseCarouselSample() {
                                     1f,
                                     max(
                                         size.width - (carouselItemDrawInfo.maxSize) +
-                                            carouselItemDrawInfo.size,
+                                                carouselItemDrawInfo.size,
                                         0f,
                                     ) / size.width,
                                 )

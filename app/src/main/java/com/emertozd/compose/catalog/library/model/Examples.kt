@@ -109,6 +109,7 @@ import com.emertozd.compose.catalog.samples.FilledTonalIconButtonSample
 import com.emertozd.compose.catalog.samples.FilledTonalIconToggleButtonSample
 import com.emertozd.compose.catalog.samples.FilterChipSample
 import com.emertozd.compose.catalog.samples.FilterChipWithLeadingIconSample
+import com.emertozd.compose.catalog.samples.FilterChipWithTrailingIconSample
 import com.emertozd.compose.catalog.samples.FloatingActionButtonMenuSample
 import com.emertozd.compose.catalog.samples.FloatingActionButtonSample
 import com.emertozd.compose.catalog.samples.FullScreenSearchBarScaffoldSample
@@ -138,6 +139,9 @@ import com.emertozd.compose.catalog.samples.LinearProgressIndicatorSample
 import com.emertozd.compose.catalog.samples.LinearWavyProgressIndicatorSample
 import com.emertozd.compose.catalog.samples.ListDetailPaneScaffoldSample
 import com.emertozd.compose.catalog.samples.ListDetailPaneScaffoldSampleWithExtraPane
+import com.emertozd.compose.catalog.samples.ListDetailPaneScaffoldSampleWithExtraPaneLevitatedAsDialog
+import com.emertozd.compose.catalog.samples.ListDetailWithNavigation2Sample
+import com.emertozd.compose.catalog.samples.ListDetailWithNavigation3Sample
 import com.emertozd.compose.catalog.samples.LoadingIndicatorPullToRefreshSample
 import com.emertozd.compose.catalog.samples.LoadingIndicatorSample
 import com.emertozd.compose.catalog.samples.MediumAnimatedExtendedFloatingActionButtonSample
@@ -155,13 +159,10 @@ import com.emertozd.compose.catalog.samples.ModalNavigationDrawerSample
 import com.emertozd.compose.catalog.samples.ModalWideNavigationRailSample
 import com.emertozd.compose.catalog.samples.MultiAutocompleteExposedDropdownMenuSample
 import com.emertozd.compose.catalog.samples.MultiSelectConnectedButtonGroupWithFlowLayoutSample
-import com.emertozd.compose.catalog.samples.NavigableListDetailPaneScaffoldSample
 import com.emertozd.compose.catalog.samples.NavigationBarItemWithBadge
 import com.emertozd.compose.catalog.samples.NavigationBarSample
-import com.emertozd.compose.catalog.samples.NavigationBarWithOnlySelectedLabelsSample
 import com.emertozd.compose.catalog.samples.NavigationRailBottomAlignSample
 import com.emertozd.compose.catalog.samples.NavigationRailSample
-import com.emertozd.compose.catalog.samples.NavigationRailWithOnlySelectedLabelsSample
 import com.emertozd.compose.catalog.samples.NavigationSuiteScaffoldCustomConfigSample
 import com.emertozd.compose.catalog.samples.NavigationSuiteScaffoldSample
 import com.emertozd.compose.catalog.samples.OneLineListItem
@@ -180,6 +181,11 @@ import com.emertozd.compose.catalog.samples.PermanentNavigationDrawerSample
 import com.emertozd.compose.catalog.samples.PinnedTopAppBar
 import com.emertozd.compose.catalog.samples.PlainTooltipSample
 import com.emertozd.compose.catalog.samples.PlainTooltipWithCaret
+import com.emertozd.compose.catalog.samples.PlainTooltipWithCaretBelowAnchor
+import com.emertozd.compose.catalog.samples.PlainTooltipWithCaretEndOfAnchor
+import com.emertozd.compose.catalog.samples.PlainTooltipWithCaretLeftOfAnchor
+import com.emertozd.compose.catalog.samples.PlainTooltipWithCaretRightOfAnchor
+import com.emertozd.compose.catalog.samples.PlainTooltipWithCaretStartOfAnchor
 import com.emertozd.compose.catalog.samples.PlainTooltipWithCustomCaret
 import com.emertozd.compose.catalog.samples.PlainTooltipWithManualInvocationSample
 import com.emertozd.compose.catalog.samples.PrimaryIconTabs
@@ -243,6 +249,9 @@ import com.emertozd.compose.catalog.samples.SquareToggleButtonSample
 import com.emertozd.compose.catalog.samples.StepRangeSliderSample
 import com.emertozd.compose.catalog.samples.StepsSliderSample
 import com.emertozd.compose.catalog.samples.SuggestionChipSample
+import com.emertozd.compose.catalog.samples.SupportingPaneScaffoldSample
+import com.emertozd.compose.catalog.samples.SupportingPaneScaffoldSampleWithExtraPaneLevitatedAsBottomSheet
+import com.emertozd.compose.catalog.samples.SwipeToDismissListItems
 import com.emertozd.compose.catalog.samples.SwitchSample
 import com.emertozd.compose.catalog.samples.SwitchWithThumbIconSample
 import com.emertozd.compose.catalog.samples.TextAndIconTabs
@@ -270,6 +279,7 @@ import com.emertozd.compose.catalog.samples.TonalToggleButtonSample
 import com.emertozd.compose.catalog.samples.TriStateCheckboxRoundedStrokesSample
 import com.emertozd.compose.catalog.samples.TriStateCheckboxSample
 import com.emertozd.compose.catalog.samples.TwoLineListItem
+import com.emertozd.compose.catalog.samples.VerticalButtonGroupSample
 import com.emertozd.compose.catalog.samples.VerticalCenteredSliderSample
 import com.emertozd.compose.catalog.samples.VerticalFloatingToolbarWithFabSample
 import com.emertozd.compose.catalog.samples.VerticalSliderSample
@@ -312,12 +322,44 @@ val AdaptiveExamples =
             ListDetailPaneScaffoldSampleWithExtraPane()
         },
         Example(
-            name = "NavigableListDetailPaneScaffoldSample",
+            name = "ListDetailPaneScaffoldSampleWithExtraPaneLevitatedAsDialog",
             description = AdaptiveExampleDescription,
             sourceUrl = AdaptiveExampleSourceUrl,
             isExpressive = false,
         ) {
-            NavigableListDetailPaneScaffoldSample()
+            ListDetailPaneScaffoldSampleWithExtraPaneLevitatedAsDialog()
+        },
+        Example(
+            name = "SupportingPaneScaffoldSample",
+            description = AdaptiveExampleDescription,
+            sourceUrl = AdaptiveExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            SupportingPaneScaffoldSample()
+        },
+        Example(
+            name = "SupportingPaneScaffoldSampleWithExtraPaneLevitatedAsBottomSheet",
+            description = AdaptiveExampleDescription,
+            sourceUrl = AdaptiveExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            SupportingPaneScaffoldSampleWithExtraPaneLevitatedAsBottomSheet()
+        },
+        Example(
+            name = "ListDetailWithNavigation2Sample",
+            description = AdaptiveExampleDescription,
+            sourceUrl = AdaptiveExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            ListDetailWithNavigation2Sample()
+        },
+        Example(
+            name = "ListDetailWithNavigation3Sample",
+            description = AdaptiveExampleDescription,
+            sourceUrl = AdaptiveExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            ListDetailWithNavigation3Sample()
         },
     )
 
@@ -535,6 +577,14 @@ val ButtonGroupsExamples =
         ) {
             MultiSelectConnectedButtonGroupWithFlowLayoutSample()
         },
+        Example(
+            name = "VerticalButtonGroupSample",
+            description = ButtonGroupsExampleDescription,
+            sourceUrl = ButtonGroupsExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            VerticalButtonGroupSample()
+        },
     )
 
 private const val CardsExampleDescription = "Cards examples"
@@ -726,6 +776,14 @@ val ChipsExamples =
             isExpressive = false,
         ) {
             FilterChipWithLeadingIconSample()
+        },
+        Example(
+            name = "FilterChipWithTrailingIconSample",
+            description = ChipsExampleDescription,
+            sourceUrl = ChipsExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            FilterChipWithTrailingIconSample()
         },
         Example(
             name = "InputChipSample",
@@ -1503,7 +1561,7 @@ val MenusExamples =
             name = "ExposedDropdownMenuSample",
             description = MenusExampleDescription,
             sourceUrl = MenusExampleSourceUrl,
-            isExpressive = false,
+            isExpressive = true,
         ) {
             ExposedDropdownMenuSample()
         },
@@ -1552,14 +1610,6 @@ val NavigationBarExamples =
             isExpressive = false,
         ) {
             NavigationBarSample()
-        },
-        Example(
-            name = "NavigationBarWithOnlySelectedLabelsSample",
-            description = NavigationBarExampleDescription,
-            sourceUrl = NavigationBarExampleSourceUrl,
-            isExpressive = false,
-        ) {
-            NavigationBarWithOnlySelectedLabelsSample()
         },
     )
 
@@ -1622,14 +1672,6 @@ val NavigationRailExamples =
             isExpressive = false,
         ) {
             NavigationRailSample()
-        },
-        Example(
-            name = "NavigationRailWithOnlySelectedLabelsSample",
-            description = NavigationRailExampleDescription,
-            sourceUrl = NavigationRailExampleSourceUrl,
-            isExpressive = false,
-        ) {
-            NavigationRailWithOnlySelectedLabelsSample()
         },
         Example(
             name = "NavigationRailBottomAlignSample",
@@ -1857,7 +1899,7 @@ val SearchBarExamples =
             name = "FullScreenSearchBarScaffoldSample",
             description = SearchBarExampleDescription,
             sourceUrl = SearchBarExampleSourceUrl,
-            isExpressive = false,
+            isExpressive = true,
         ) {
             FullScreenSearchBarScaffoldSample()
         },
@@ -1865,7 +1907,7 @@ val SearchBarExamples =
             name = "DockedSearchBarScaffoldSample",
             description = SearchBarExampleDescription,
             sourceUrl = SearchBarExampleSourceUrl,
-            isExpressive = false,
+            isExpressive = true,
         ) {
             DockedSearchBarScaffoldSample()
         },
@@ -2529,6 +2571,46 @@ val TooltipsExamples =
             PlainTooltipWithCaret()
         },
         Example(
+            name = "PlainTooltipWithCaretBelowAnchor",
+            description = TooltipsExampleDescription,
+            sourceUrl = TooltipsExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            PlainTooltipWithCaretBelowAnchor()
+        },
+        Example(
+            name = "PlainTooltipWithCaretLeftOfAnchor",
+            description = TooltipsExampleDescription,
+            sourceUrl = TooltipsExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            PlainTooltipWithCaretLeftOfAnchor()
+        },
+        Example(
+            name = "PlainTooltipWithCaretRightOfAnchor",
+            description = TooltipsExampleDescription,
+            sourceUrl = TooltipsExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            PlainTooltipWithCaretRightOfAnchor()
+        },
+        Example(
+            name = "PlainTooltipWithCaretStartOfAnchor",
+            description = TooltipsExampleDescription,
+            sourceUrl = TooltipsExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            PlainTooltipWithCaretStartOfAnchor()
+        },
+        Example(
+            name = "PlainTooltipWithCaretEndOfAnchor",
+            description = TooltipsExampleDescription,
+            sourceUrl = TooltipsExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            PlainTooltipWithCaretEndOfAnchor()
+        },
+        Example(
             name = "PlainTooltipWithCustomCaret",
             description = TooltipsExampleDescription,
             sourceUrl = TooltipsExampleSourceUrl,
@@ -2579,5 +2661,17 @@ val MaterialShapesExamples =
             isExpressive = true,
         ) {
             AllShapes()
+        }
+    )
+
+val SwipeToDismissExamples =
+    listOf(
+        Example(
+            name = "SwipeToDismiss",
+            description = "Swipe to dismiss examples",
+            sourceUrl = "$SampleSourceUrl/SwipeToDismissSamples.kt",
+            isExpressive = true,
+        ) {
+            SwipeToDismissListItems()
         }
     )

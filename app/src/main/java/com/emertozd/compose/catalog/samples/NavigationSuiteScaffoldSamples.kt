@@ -26,7 +26,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
@@ -51,7 +50,6 @@ import androidx.window.core.layout.WindowWidthSizeClass
 import com.emertozd.compose.catalog.library.Sampled
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Preview
 @Sampled
 @Composable
@@ -91,7 +89,7 @@ fun NavigationSuiteScaffoldSample() {
                 modifier = Modifier.padding(16.dp),
                 text =
                     "Current NavigationSuiteType: $navSuiteType\n" +
-                        "Visibility: ${state.currentValue}",
+                            "Visibility: ${state.currentValue}",
                 textAlign = TextAlign.Center,
             )
             Button(onClick = { scope.launch { state.toggle() } }) {
@@ -101,7 +99,6 @@ fun NavigationSuiteScaffoldSample() {
     }
 }
 
-@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Preview
 @Sampled
 @Composable
@@ -116,7 +113,7 @@ fun NavigationSuiteScaffoldCustomConfigSample() {
         with(currentWindowAdaptiveInfo()) {
             if (
                 windowSizeClass.windowWidthSizeClass == WindowWidthSizeClass.COMPACT ||
-                    windowSizeClass.windowWidthSizeClass == WindowWidthSizeClass.MEDIUM
+                windowSizeClass.windowWidthSizeClass == WindowWidthSizeClass.MEDIUM
             ) {
                 NavigationSuiteType.WideNavigationRailCollapsed
             } else if (windowSizeClass.windowHeightSizeClass == WindowHeightSizeClass.COMPACT) {
@@ -161,7 +158,7 @@ fun NavigationSuiteScaffoldCustomConfigSample() {
                 modifier = Modifier.padding(16.dp),
                 text =
                     "Current NavigationSuiteType: $navSuiteType\n" +
-                        "Visibility: ${state.currentValue}",
+                            "Visibility: ${state.currentValue}",
                 textAlign = TextAlign.Center,
             )
             Button(onClick = { scope.launch { state.toggle() } }) {
