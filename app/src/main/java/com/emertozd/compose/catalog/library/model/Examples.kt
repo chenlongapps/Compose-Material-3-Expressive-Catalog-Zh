@@ -55,6 +55,8 @@ import com.emertozd.compose.catalog.samples.CircularProgressIndicatorSample
 import com.emertozd.compose.catalog.samples.CircularWavyProgressIndicatorSample
 import com.emertozd.compose.catalog.samples.ClickableCardSample
 import com.emertozd.compose.catalog.samples.ClickableElevatedCardSample
+import com.emertozd.compose.catalog.samples.ClickableListItemSample
+import com.emertozd.compose.catalog.samples.ClickableListItemWithClickableChildSample
 import com.emertozd.compose.catalog.samples.ClickableOutlinedCardSample
 import com.emertozd.compose.catalog.samples.ContainedLoadingIndicatorSample
 import com.emertozd.compose.catalog.samples.CustomTwoRowsTopAppBar
@@ -79,6 +81,7 @@ import com.emertozd.compose.catalog.samples.ElevatedSplitButtonSample
 import com.emertozd.compose.catalog.samples.ElevatedSuggestionChipSample
 import com.emertozd.compose.catalog.samples.ElevatedToggleButtonSample
 import com.emertozd.compose.catalog.samples.EnterAlwaysTopAppBar
+import com.emertozd.compose.catalog.samples.EnterAlwaysTopAppBarWithReverseScrolling
 import com.emertozd.compose.catalog.samples.ExitAlwaysBottomAppBar
 import com.emertozd.compose.catalog.samples.ExitAlwaysBottomAppBarFixed
 import com.emertozd.compose.catalog.samples.ExitAlwaysBottomAppBarFixedVibrant
@@ -108,11 +111,13 @@ import com.emertozd.compose.catalog.samples.FilledTonalButtonWithAnimatedShapeSa
 import com.emertozd.compose.catalog.samples.FilledTonalIconButtonSample
 import com.emertozd.compose.catalog.samples.FilledTonalIconToggleButtonSample
 import com.emertozd.compose.catalog.samples.FilterChipSample
+import com.emertozd.compose.catalog.samples.FilterChipWithCustomSpacingSample
 import com.emertozd.compose.catalog.samples.FilterChipWithLeadingIconSample
 import com.emertozd.compose.catalog.samples.FilterChipWithTrailingIconSample
 import com.emertozd.compose.catalog.samples.FloatingActionButtonMenuSample
 import com.emertozd.compose.catalog.samples.FloatingActionButtonSample
 import com.emertozd.compose.catalog.samples.FullScreenSearchBarScaffoldSample
+import com.emertozd.compose.catalog.samples.GroupedMenuSample
 import com.emertozd.compose.catalog.samples.HorizontalCenteredHeroCarouselSample
 import com.emertozd.compose.catalog.samples.HorizontalFloatingToolbarAsScaffoldFabSample
 import com.emertozd.compose.catalog.samples.HorizontalFloatingToolbarWithFabSample
@@ -142,6 +147,7 @@ import com.emertozd.compose.catalog.samples.ListDetailPaneScaffoldSampleWithExtr
 import com.emertozd.compose.catalog.samples.ListDetailPaneScaffoldSampleWithExtraPaneLevitatedAsDialog
 import com.emertozd.compose.catalog.samples.ListDetailWithNavigation2Sample
 import com.emertozd.compose.catalog.samples.ListDetailWithNavigation3Sample
+import com.emertozd.compose.catalog.samples.ListItemWithModeChangeOnLongClickSample
 import com.emertozd.compose.catalog.samples.LoadingIndicatorPullToRefreshSample
 import com.emertozd.compose.catalog.samples.LoadingIndicatorSample
 import com.emertozd.compose.catalog.samples.MediumAnimatedExtendedFloatingActionButtonSample
@@ -157,8 +163,11 @@ import com.emertozd.compose.catalog.samples.MenuWithScrollStateSample
 import com.emertozd.compose.catalog.samples.ModalBottomSheetSample
 import com.emertozd.compose.catalog.samples.ModalNavigationDrawerSample
 import com.emertozd.compose.catalog.samples.ModalWideNavigationRailSample
+import com.emertozd.compose.catalog.samples.MultiAspectCarouselLazyRowSample
 import com.emertozd.compose.catalog.samples.MultiAutocompleteExposedDropdownMenuSample
 import com.emertozd.compose.catalog.samples.MultiSelectConnectedButtonGroupWithFlowLayoutSample
+import com.emertozd.compose.catalog.samples.MultiSelectionListItemSample
+import com.emertozd.compose.catalog.samples.MultiSelectionSegmentedListItemSample
 import com.emertozd.compose.catalog.samples.NavigationBarItemWithBadge
 import com.emertozd.compose.catalog.samples.NavigationBarSample
 import com.emertozd.compose.catalog.samples.NavigationRailBottomAlignSample
@@ -179,6 +188,8 @@ import com.emertozd.compose.catalog.samples.OverflowingVerticalFloatingToolbarSa
 import com.emertozd.compose.catalog.samples.PasswordTextField
 import com.emertozd.compose.catalog.samples.PermanentNavigationDrawerSample
 import com.emertozd.compose.catalog.samples.PinnedTopAppBar
+import com.emertozd.compose.catalog.samples.PinnedTopAppBarWithPreScrolledLazyColumn
+import com.emertozd.compose.catalog.samples.PinnedTopAppBarWithReversedLazyGrid
 import com.emertozd.compose.catalog.samples.PlainTooltipSample
 import com.emertozd.compose.catalog.samples.PlainTooltipWithCaret
 import com.emertozd.compose.catalog.samples.PlainTooltipWithCaretBelowAnchor
@@ -218,6 +229,7 @@ import com.emertozd.compose.catalog.samples.SecondaryIconTabs
 import com.emertozd.compose.catalog.samples.SecondaryTextTabs
 import com.emertozd.compose.catalog.samples.SegmentedButtonMultiSelectSample
 import com.emertozd.compose.catalog.samples.SegmentedButtonSingleSelectSample
+import com.emertozd.compose.catalog.samples.SegmentedListItemWithExpansionSample
 import com.emertozd.compose.catalog.samples.ShortNavigationBarSample
 import com.emertozd.compose.catalog.samples.ShortNavigationBarWithHorizontalItemsSample
 import com.emertozd.compose.catalog.samples.SimpleBottomAppBar
@@ -231,6 +243,8 @@ import com.emertozd.compose.catalog.samples.SimpleTopAppBar
 import com.emertozd.compose.catalog.samples.SimpleTopAppBarWithAdaptiveActions
 import com.emertozd.compose.catalog.samples.SimpleTopAppBarWithSubtitle
 import com.emertozd.compose.catalog.samples.SingleSelectConnectedButtonGroupWithFlowLayoutSample
+import com.emertozd.compose.catalog.samples.SingleSelectionListItemSample
+import com.emertozd.compose.catalog.samples.SingleSelectionSegmentedListItemSample
 import com.emertozd.compose.catalog.samples.SliderSample
 import com.emertozd.compose.catalog.samples.SliderWithCustomThumbSample
 import com.emertozd.compose.catalog.samples.SliderWithCustomTrackAndThumbSample
@@ -685,6 +699,14 @@ val CarouselExamples =
         ) {
             CarouselWithShowAllButtonSample()
         },
+        Example(
+            name = "MultiAspectCarouselLazyRowSample",
+            description = CarouselExampleDescription,
+            sourceUrl = CarouselExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            MultiAspectCarouselLazyRowSample()
+        },
     )
 
 private const val CheckboxesExampleDescription = "Checkboxes examples"
@@ -784,6 +806,14 @@ val ChipsExamples =
             isExpressive = false,
         ) {
             FilterChipWithTrailingIconSample()
+        },
+        Example(
+            name = "FilterChipWithCustomSpacingSample",
+            description = ChipsExampleDescription,
+            sourceUrl = ChipsExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            FilterChipWithCustomSpacingSample()
         },
         Example(
             name = "InputChipSample",
@@ -1042,12 +1072,36 @@ val TopAppBarExamples =
             PinnedTopAppBar()
         },
         Example(
+            name = "PinnedTopAppBarWithPreScrolledLazyColumn",
+            description = TopAppBarExampleDescription,
+            sourceUrl = TopAppBarExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            PinnedTopAppBarWithPreScrolledLazyColumn()
+        },
+        Example(
+            name = "PinnedTopAppBarWithReversedLazyGrid",
+            description = TopAppBarExampleDescription,
+            sourceUrl = TopAppBarExampleSourceUrl,
+            isExpressive = false,
+        ) {
+            PinnedTopAppBarWithReversedLazyGrid()
+        },
+        Example(
             name = "EnterAlwaysTopAppBar",
             description = TopAppBarExampleDescription,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = true,
         ) {
             EnterAlwaysTopAppBar()
+        },
+        Example(
+            name = "EnterAlwaysTopAppBarWithReverseScrolling",
+            description = TopAppBarExampleDescription,
+            sourceUrl = TopAppBarExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            EnterAlwaysTopAppBarWithReverseScrolling()
         },
         Example(
             name = "ExitUntilCollapsedMediumTopAppBar",
@@ -1386,6 +1440,70 @@ val ListsExamples =
         ) {
             ThreeLineListItemWithExtendedSupporting()
         },
+        Example(
+            name = "ClickableListItemSample",
+            description = ListsExampleDescription,
+            sourceUrl = ListsExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            ClickableListItemSample()
+        },
+        Example(
+            name = "ClickableListItemWithClickableChildSample",
+            description = ListsExampleDescription,
+            sourceUrl = ListsExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            ClickableListItemWithClickableChildSample()
+        },
+        Example(
+            name = "SingleSelectionListItemSample",
+            description = ListsExampleDescription,
+            sourceUrl = ListsExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            SingleSelectionListItemSample()
+        },
+        Example(
+            name = "MultiSelectionListItemSample",
+            description = ListsExampleDescription,
+            sourceUrl = ListsExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            MultiSelectionListItemSample()
+        },
+        Example(
+            name = "ListItemWithModeChangeOnLongClickSample",
+            description = ListsExampleDescription,
+            sourceUrl = ListsExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            ListItemWithModeChangeOnLongClickSample()
+        },
+        Example(
+            name = "SingleSelectionSegmentedListItemSample",
+            description = ListsExampleDescription,
+            sourceUrl = ListsExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            SingleSelectionSegmentedListItemSample()
+        },
+        Example(
+            name = "MultiSelectionSegmentedListItemSample",
+            description = ListsExampleDescription,
+            sourceUrl = ListsExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            MultiSelectionSegmentedListItemSample()
+        },
+        Example(
+            name = "SegmentedListItemWithExpansionSample",
+            description = ListsExampleDescription,
+            sourceUrl = ListsExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            SegmentedListItemWithExpansionSample()
+        },
     )
 
 private const val IconButtonExampleDescription = "Icon button examples"
@@ -1548,6 +1666,14 @@ val MenusExamples =
             isExpressive = false,
         ) {
             MenuSample()
+        },
+        Example(
+            name = "GroupedMenuSample",
+            description = MenusExampleDescription,
+            sourceUrl = MenusExampleSourceUrl,
+            isExpressive = true,
+        ) {
+            GroupedMenuSample()
         },
         Example(
             name = "MenuWithScrollStateSample",
