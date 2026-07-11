@@ -16,6 +16,8 @@
 
 package com.emertozd.compose.catalog.library
 
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.ExitTransition
 import com.emertozd.compose.catalog.library.data.UserPreferencesRepository
 import com.emertozd.compose.catalog.library.model.Component
 import com.emertozd.compose.catalog.library.model.Components
@@ -47,7 +49,14 @@ fun NavGraph(initialFavoriteRoute: String?, theme: Theme, onThemeChange: (theme:
     val coroutineScope = rememberCoroutineScope()
     val userPreferencesRepository = remember { UserPreferencesRepository(context) }
     var favoriteRoute by rememberSaveable { mutableStateOf(initialFavoriteRoute) }
-    NavHost(navController = navController, startDestination = HomeRoute) {
+    NavHost(
+        navController = navController,
+        startDestination = HomeRoute,
+        enterTransition = { EnterTransition.None },
+        exitTransition = { ExitTransition.None },
+        popEnterTransition = { EnterTransition.None },
+        popExitTransition = { ExitTransition.None },
+    ) {
         composable(HomeRoute) {
             Home(
                 components = Components,

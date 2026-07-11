@@ -4,12 +4,12 @@ import android.os.Parcel
 import android.os.Parcelable
 import androidx.annotation.FloatRange
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.ExitTransition
 import androidx.compose.animation.expandHorizontally
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkHorizontally
-import androidx.compose.animation.slideInHorizontally
-import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -532,10 +532,10 @@ fun ListDetailWithNavigation2Sample() {
     NavHost(
         navController = navController,
         startDestination = welcomeRoute,
-        enterTransition = { slideInHorizontally(initialOffsetX = { it }) },
-        exitTransition = { slideOutHorizontally(targetOffsetX = { -it }) },
-        popEnterTransition = { slideInHorizontally(initialOffsetX = { -it }) },
-        popExitTransition = { slideOutHorizontally(targetOffsetX = { it }) },
+        enterTransition = { EnterTransition.None },
+        exitTransition = { ExitTransition.None },
+        popEnterTransition = { EnterTransition.None },
+        popExitTransition = { ExitTransition.None },
     ) {
         composable(welcomeRoute) {
             Scaffold(Modifier.fillMaxSize()) { paddingValues ->
