@@ -39,6 +39,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.emertozd.compose.catalog.R
 import com.emertozd.compose.catalog.library.model.Component
+import com.emertozd.compose.catalog.library.model.localizedAdditionalInfo
+import com.emertozd.compose.catalog.library.model.localizedName
 import com.emertozd.compose.catalog.library.ui.common.ItemBanner
 
 @Composable
@@ -47,6 +49,7 @@ fun ComponentItem(
     markExpressiveComponents: Boolean,
     onClick: (component: Component) -> Unit
 ) {
+    val additionalInfo = component.localizedAdditionalInfo()
     OutlinedCard(
         onClick = { onClick(component) },
         modifier = Modifier.height(ComponentItemHeight).padding(ComponentItemOuterPadding)
@@ -65,11 +68,11 @@ fun ComponentItem(
                 contentScale = ContentScale.Inside
             )
             Text(
-                text = component.name,
+                text = component.localizedName(),
                 modifier = Modifier.align(Alignment.BottomStart),
                 style = MaterialTheme.typography.bodySmall
             )
-            if (!component.additionalInfo.isNullOrBlank()) {
+            if (!additionalInfo.isNullOrBlank()) {
                 Text(
                     modifier =
                         Modifier.background(
@@ -78,7 +81,7 @@ fun ComponentItem(
                             )
                             .align(Alignment.TopEnd)
                             .padding(4.dp),
-                    text = component.additionalInfo,
+                    text = additionalInfo,
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.surface
                 )
@@ -86,7 +89,7 @@ fun ComponentItem(
         }
         if (markExpressiveComponents && component.hasExpressiveExamples) {
             ItemBanner(
-                text = "Expr",
+                text = stringResource(R.string.expressive_badge),
                 bannerSize = ComponentItemBannerSize,
             )
         }

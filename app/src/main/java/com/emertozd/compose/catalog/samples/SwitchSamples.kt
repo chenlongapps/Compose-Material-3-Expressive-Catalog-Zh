@@ -20,7 +20,7 @@ import com.emertozd.compose.catalog.library.Sampled
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.runtime.Composable
@@ -32,14 +32,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
+import com.emertozd.compose.catalog.samples.localization.localizedString
 
 @Preview
 @Sampled
 @Composable
 fun SwitchSample() {
     var checked by remember { mutableStateOf(true) }
+    val description = localizedString("Demo")
     Switch(
-        modifier = Modifier.semantics { contentDescription = "Demo" },
+        modifier = Modifier.semantics { contentDescription = description },
         checked = checked,
         onCheckedChange = { checked = it },
     )
@@ -50,9 +52,10 @@ fun SwitchSample() {
 @Composable
 fun SwitchWithThumbIconSample() {
     var checked by remember { mutableStateOf(true) }
+    val description = localizedString("Demo with icon")
 
     Switch(
-        modifier = Modifier.semantics { contentDescription = "Demo with icon" },
+        modifier = Modifier.semantics { contentDescription = description },
         checked = checked,
         onCheckedChange = { checked = it },
         thumbContent = {

@@ -28,7 +28,7 @@ import androidx.compose.foundation.selection.triStateToggleable
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.material3.TriStateCheckbox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf

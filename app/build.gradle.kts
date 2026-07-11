@@ -42,6 +42,10 @@ android {
     buildFeatures {
         compose = true
     }
+    androidResources {
+        generateLocaleConfig = true
+        localeFilters += listOf("en", "b+zh+Hans")
+    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -50,6 +54,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.appcompat)
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)

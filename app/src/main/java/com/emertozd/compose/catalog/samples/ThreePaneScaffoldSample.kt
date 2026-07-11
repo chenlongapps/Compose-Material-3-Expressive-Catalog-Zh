@@ -36,14 +36,14 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.VerticalDragHandle
 import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
@@ -100,6 +100,7 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import com.emertozd.compose.catalog.library.Sampled
+import com.emertozd.compose.catalog.samples.localization.localizedString
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
@@ -432,6 +433,8 @@ fun <T> levitateAsDialogSample(): ThreePaneScaffoldNavigator<T> {
     val scaffoldDirective = calculatePaneScaffoldDirective(currentWindowAdaptiveInfo())
     var navigator: ThreePaneScaffoldNavigator<T>? = null
     val onClick: () -> Unit = { coroutineScope.launch { navigator?.navigateBack() } }
+    val scrimDescription = localizedString("Scrim")
+    val dismissDescription = localizedString("Dismiss the extra pane")
     navigator =
         rememberListDetailPaneScaffoldNavigator<T>(
             scaffoldDirective = scaffoldDirective,
@@ -443,8 +446,8 @@ fun <T> levitateAsDialogSample(): ThreePaneScaffoldNavigator<T> {
                                 scrim = {
                                     LevitatedPaneScrim(
                                         Modifier.semantics {
-                                            contentDescription = "Scrim"
-                                            this.onClick("Dismiss the extra pane") {
+                                            contentDescription = scrimDescription
+                                            this.onClick(dismissDescription) {
                                                 onClick()
                                                 true
                                             }
@@ -702,13 +705,13 @@ private fun ThreePaneScaffoldNavigator<*>.isExpanded(role: ThreePaneScaffoldRole
     scaffoldValue[role] == PaneAdaptedValue.Expanded
 
 private data class NavItemData(val index: Int, val showExtra: Boolean = false) : Parcelable {
-    constructor(parcel: Parcel) : this(parcel.readInt(), parcel.readBoolean())
+    constructor(parcel: Parcel) : this(parcel.readInt(), parcel.readInt() != 0)
 
     override fun describeContents(): Int = 0
 
     override fun writeToParcel(dest: Parcel, flags: Int) {
         dest.writeInt(index)
-        dest.writeBoolean(showExtra)
+        dest.writeInt(if (showExtra) 1 else 0)
     }
 
     companion object CREATOR : Parcelable.Creator<NavItemData?> {

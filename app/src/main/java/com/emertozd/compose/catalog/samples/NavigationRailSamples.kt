@@ -34,13 +34,14 @@ import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.StarBorder
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ModalWideNavigationRail
 import androidx.compose.material3.NavigationRail
 import androidx.compose.material3.NavigationRailItem
 import androidx.compose.material3.PlainTooltip
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
+import com.emertozd.compose.catalog.samples.localization.localizedAccessibilityString
 import androidx.compose.material3.TooltipAnchorPosition
 import androidx.compose.material3.TooltipBox
 import androidx.compose.material3.TooltipDefaults
@@ -105,9 +106,9 @@ fun WideNavigationRailResponsiveSample() {
                                 // rail for accessibility.
                                 stateDescription =
                                     if (state.currentValue == WideNavigationRailValue.Expanded) {
-                                        "Expanded"
+                                        localizedAccessibilityString("Expanded")
                                     } else {
-                                        "Collapsed"
+                                        localizedAccessibilityString("Collapsed")
                                     }
                             },
                         onClick = {
@@ -208,9 +209,9 @@ fun ModalWideNavigationRailSample() {
                                 // rail for accessibility.
                                 stateDescription =
                                     if (state.currentValue == WideNavigationRailValue.Expanded) {
-                                        "Expanded"
+                                        localizedAccessibilityString("Expanded")
                                     } else {
-                                        "Collapsed"
+                                        localizedAccessibilityString("Collapsed")
                                     }
                             },
                         onClick = {

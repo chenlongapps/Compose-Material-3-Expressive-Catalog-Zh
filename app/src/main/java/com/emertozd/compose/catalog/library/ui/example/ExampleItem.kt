@@ -43,6 +43,7 @@ import com.emertozd.compose.catalog.library.ui.common.ItemBanner
 @Composable
 fun ExampleItem(
     example: Example,
+    componentName: String,
     markExpressiveComponents: Boolean,
     onClick: (example: Example) -> Unit,
 ) {
@@ -52,7 +53,14 @@ fun ExampleItem(
                 Column(modifier = Modifier.weight(1f, fill = true)) {
                     Text(text = example.name, style = MaterialTheme.typography.titleSmall)
                     Spacer(modifier = Modifier.height(ExampleItemTextPadding))
-                    Text(text = example.description, style = MaterialTheme.typography.bodySmall)
+                    Text(
+                        text =
+                            stringResource(
+                                R.string.component_examples_description,
+                                componentName,
+                            ),
+                        style = MaterialTheme.typography.bodySmall,
+                    )
                 }
                 Spacer(modifier = Modifier.width(ExampleItemPadding))
                 Icon(
@@ -63,7 +71,7 @@ fun ExampleItem(
             }
             if (markExpressiveComponents && example.isExpressive) {
                 ItemBanner(
-                    text = "Expr",
+                    text = stringResource(R.string.expressive_badge),
                     bannerSize = ExampleItemBannerSize,
                 )
             }

@@ -1,4 +1,6 @@
-![banner](https://github.com/emertozd/Compose-Material-3-Catalog/blob/main/composem3catalog.png)
+![banner](https://github.com/chenlongapps/Compose-Material-3-Expressive-Catalog-Zh/blob/main/composem3catalog.png)
+
+[English](README.md) | [简体中文](README.zh-CN.md)
 
 # Compose Material3 Expressive Catalog
 
@@ -17,7 +19,7 @@ for developers to explore without needing to build the entire AndroidX package.
 
 ## Screenshots
 
-<img src="https://github.com/emertozd/Compose-Material-3-Catalog/blob/main/screenshots/1.png" width="200" height="445"> <img src="https://github.com/emertozd/Compose-Material-3-Catalog/blob/main/screenshots/2.png" width="200" height="445"> <img src="https://github.com/emertozd/Compose-Material-3-Catalog/blob/main/screenshots/3.png" width="200" height="445"> <img src="https://github.com/emertozd/Compose-Material-3-Catalog/blob/main/screenshots/4.png" width="200" height="445"> <img src="https://github.com/emertozd/Compose-Material-3-Catalog/blob/main/screenshots/5.png" width="200" height="445"> 
+<img src="https://github.com/chenlongapps/Compose-Material-3-Expressive-Catalog-Zh/blob/main/screenshots/1.png" width="200" height="445"> <img src="https://github.com/chenlongapps/Compose-Material-3-Expressive-Catalog-Zh/blob/main/screenshots/2.png" width="200" height="445"> <img src="https://github.com/chenlongapps/Compose-Material-3-Expressive-Catalog-Zh/blob/main/screenshots/3.png" width="200" height="445"> <img src="https://github.com/chenlongapps/Compose-Material-3-Expressive-Catalog-Zh/blob/main/screenshots/4.png" width="200" height="445"> <img src="https://github.com/chenlongapps/Compose-Material-3-Expressive-Catalog-Zh/blob/main/screenshots/5.png" width="200" height="445"> 
 
 ## Used Versions
 

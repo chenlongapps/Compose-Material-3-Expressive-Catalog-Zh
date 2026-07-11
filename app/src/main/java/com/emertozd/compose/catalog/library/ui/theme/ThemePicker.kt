@@ -251,7 +251,7 @@ fun ThemePicker(theme: Theme, onThemeChange: (theme: Theme) -> Unit) {
                     )
                 }
                 SwitchSetting(
-                    text = "Mark expressive components",
+                    text = stringResource(R.string.mark_expressive_components),
                     modifier = Modifier.fillMaxWidth(),
                     checked = theme.markExpressiveComponents,
                     onCheckedChange = { checked ->
@@ -261,7 +261,7 @@ fun ThemePicker(theme: Theme, onThemeChange: (theme: Theme) -> Unit) {
                     },
                 )
                 SwitchSetting(
-                    text = "Show only expressive components",
+                    text = stringResource(R.string.show_only_expressive_components),
                     modifier = Modifier.fillMaxWidth(),
                     checked = theme.showOnlyExpressiveComponents,
                     onCheckedChange = { checked ->
@@ -333,7 +333,7 @@ private fun <T> RadioButtonOption(
         horizontalArrangement = Arrangement.spacedBy(ThemePickerPadding),
     ) {
         RadioButton(selected = selected, enabled = enabled, onClick = null)
-        Text(text = option.toString(), style = MaterialTheme.typography.bodyMedium)
+        Text(text = localizedOptionLabel(option), style = MaterialTheme.typography.bodyMedium)
     }
 }
 
@@ -399,17 +399,35 @@ private fun ExpressiveAlertDialog(
 ) {
     AlertDialog(
         icon = { Icon(imageVector = Icons.Filled.Warning, contentDescription = null) },
-        title = { Text("Warning") },
+        title = { Text(stringResource(R.string.warning)) },
         text = {
-            Text(
-                "Setting a new Material theme will reset the catalog and progress will be " +
-                        "lost. Please confirm before proceeding."
-            )
+            Text(stringResource(R.string.theme_change_warning))
         },
         onDismissRequest = onDismissRequest,
-        confirmButton = { Button(onClick = onConfirmButtonClick) { Text("Confirm") } },
-        dismissButton = { Button(onClick = onDismissButtonClick) { Text("Cancel") } },
+        confirmButton = {
+            Button(onClick = onConfirmButtonClick) { Text(stringResource(R.string.confirm)) }
+        },
+        dismissButton = {
+            Button(onClick = onDismissButtonClick) { Text(stringResource(R.string.cancel)) }
+        },
     )
 }
+
+@Composable
+private fun <T> localizedOptionLabel(option: T): String =
+    when (option) {
+        TextDirection.System, FontScaleMode.System, ThemeColorMode.System ->
+            stringResource(R.string.option_system)
+        TextDirection.LTR -> stringResource(R.string.option_ltr)
+        TextDirection.RTL -> stringResource(R.string.option_rtl)
+        ColorMode.Baseline -> stringResource(R.string.option_baseline)
+        ColorMode.Custom, FontScaleMode.Custom -> stringResource(R.string.option_custom)
+        ColorMode.Dynamic -> stringResource(R.string.option_dynamic)
+        ThemeColorMode.Light -> stringResource(R.string.option_light)
+        ThemeColorMode.Dark -> stringResource(R.string.option_dark)
+        ExpressiveThemeMode.Expressive -> stringResource(R.string.option_expressive)
+        ExpressiveThemeMode.NonExpressive -> stringResource(R.string.option_non_expressive)
+        else -> option.toString()
+    }
 
 private val ThemePickerPadding = 16.dp

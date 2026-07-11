@@ -48,11 +48,11 @@ import androidx.compose.material3.FloatingToolbarDefaults.floatingToolbarVertica
 import androidx.compose.material3.FloatingToolbarExitDirection.Companion.Bottom
 import androidx.compose.material3.FloatingToolbarExitDirection.Companion.End
 import androidx.compose.material3.HorizontalFloatingToolbar
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.material3.VerticalFloatingToolbar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue

@@ -28,9 +28,9 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ButtonShapes
 import androidx.compose.material3.ElevatedToggleButton
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.OutlinedToggleButton
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.material3.ToggleButton
 import androidx.compose.material3.ToggleButtonDefaults
 import androidx.compose.material3.ToggleButtonShapes

@@ -47,14 +47,14 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.DismissibleDrawerSheet
 import androidx.compose.material3.DismissibleNavigationDrawer
 import androidx.compose.material3.DrawerValue
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.ModalDrawerSheet
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.NavigationDrawerItemDefaults
 import androidx.compose.material3.PermanentDrawerSheet
 import androidx.compose.material3.PermanentNavigationDrawer
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -76,7 +76,7 @@ import kotlinx.coroutines.launch
 fun ModalNavigationDrawerSample() {
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
-    val focusRequester = FocusRequester()
+    val focusRequester = remember { FocusRequester() }
     // icons to mimic drawer destinations
     val items =
         listOf(
@@ -207,7 +207,7 @@ fun PermanentNavigationDrawerSample() {
 fun DismissibleNavigationDrawerSample() {
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
-    val focusRequester = FocusRequester()
+    val focusRequester = remember { FocusRequester() }
     // icons to mimic drawer destinations
     val items =
         listOf(

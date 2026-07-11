@@ -26,8 +26,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material3.Button
-import androidx.compose.material3.Icon
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Icon
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteItem
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold

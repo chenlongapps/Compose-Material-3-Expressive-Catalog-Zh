@@ -25,7 +25,7 @@ import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -39,6 +39,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.emertozd.compose.catalog.library.Sampled
+import com.emertozd.compose.catalog.samples.localization.localizedString
 
 @Preview
 @Sampled
@@ -46,6 +47,7 @@ import com.emertozd.compose.catalog.library.Sampled
 fun RadioButtonSample() {
     // We have two radio buttons and only one can be selected
     var state by remember { mutableStateOf(true) }
+    val description = localizedString("Localized Description")
     // Note that Modifier.selectableGroup() is essential to ensure correct accessibility behavior.
     // We also set a content description for this sample, but note that a RadioButton would usually
     // be part of a higher level component, such as a raw with text, and that component would need
@@ -54,12 +56,12 @@ fun RadioButtonSample() {
         RadioButton(
             selected = state,
             onClick = { state = true },
-            modifier = Modifier.semantics { contentDescription = "Localized Description" },
+            modifier = Modifier.semantics { contentDescription = description },
         )
         RadioButton(
             selected = !state,
             onClick = { state = false },
-            modifier = Modifier.semantics { contentDescription = "Localized Description" },
+            modifier = Modifier.semantics { contentDescription = description },
         )
     }
 }

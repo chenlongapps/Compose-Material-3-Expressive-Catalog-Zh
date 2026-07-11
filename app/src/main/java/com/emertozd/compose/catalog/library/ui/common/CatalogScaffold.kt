@@ -64,6 +64,7 @@ fun CatalogScaffold(
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
     val sheetState = rememberModalBottomSheetState()
     var openThemePicker by rememberSaveable { mutableStateOf(false) }
+    var openLanguagePicker by rememberSaveable { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
@@ -75,6 +76,7 @@ fun CatalogScaffold(
                 favorite = favorite,
                 onFavoriteClick = onFavoriteClick,
                 onThemeClick = { openThemePicker = true },
+                onLanguageClick = { openLanguagePicker = true },
                 onGuidelinesClick = { context.openUrl(guidelinesUrl) },
                 onDocsClick = { context.openUrl(docsUrl) },
                 onSourceClick = { context.openUrl(sourceUrl) },
@@ -94,5 +96,8 @@ fun CatalogScaffold(
             sheetState = sheetState,
             content = { ThemePicker(theme = theme, onThemeChange = onThemeChange) },
         )
+    }
+    if (openLanguagePicker) {
+        LanguagePickerDialog(onDismissRequest = { openLanguagePicker = false })
     }
 }

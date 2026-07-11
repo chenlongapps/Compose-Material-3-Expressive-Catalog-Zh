@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sample_text_source" translatable="false">
+        <item>Button</item>
+        <item>Action</item>
+        <item>Add</item>
+        <item>Add to favorites</item>
+        <item>Add to list</item>
+        <item>Add to starred</item>
+        <item>Additional info</item>
+        <item>Application content</item>
+        <item>Archive</item>
+        <item>Artists</item>
+        <item>Assist Chip</item>
+        <item>Attachment</item>
+        <item>Back</item>
+        <item>Body content</item>
+        <item>Bottom</item>
+        <item>Bottom sheet scaffold</item>
+        <item>Build better apps faster with </item>
+        <item>Button 1</item>
+        <item>Button 2</item>
+        <item>Button 3</item>
+        <item>Button 4</item>
+        <item>Button 5</item>
+        <item>Calls</item>
+        <item>Cancel</item>
+        <item>Card content</item>
+        <item>Center</item>
+        <item>Centered TopAppBar</item>
+        <item>Change arrangement to:</item>
+        <item>Check</item>
+        <item>Clear text</item>
+        <item>Click to collapse sheet</item>
+        <item>Click to expand/collapse</item>
+        <item>Click to open</item>
+        <item>Clickable</item>
+        <item>Close</item>
+        <item>Close menu</item>
+        <item>Collapse rail</item>
+        <item>Collapsed</item>
+        <item>Collapsed Subtitle</item>
+        <item>Collapsed TopAppBar</item>
+        <item>Configure permissions for selected service accounts. </item>
+        <item>Confirm</item>
+        <item>Current NavigationSuiteType:</item>
+        <item>Custom Snackbar Demo</item>
+        <item>Daily</item>
+        <item>Day</item>
+        <item>Demo</item>
+        <item>Demo with icon</item>
+        <item>Dismiss</item>
+        <item>Dismiss the extra pane</item>
+        <item>Display tooltip</item>
+        <item>Download</item>
+        <item>Edit</item>
+        <item>Edit mode</item>
+        <item>Elevated Button</item>
+        <item>Email</item>
+        <item>Emotes</item>
+        <item>Enter password</item>
+        <item>Error</item>
+        <item>Expand rail</item>
+        <item>Expanded</item>
+        <item>Expanded Subtitle</item>
+        <item>Expanded TopAppBar</item>
+        <item>Extended FAB</item>
+        <item>Extra 1</item>
+        <item>Extra 2</item>
+        <item>Extra 3</item>
+        <item>Extra content</item>
+        <item>Favorite</item>
+        <item>Favorites</item>
+        <item>Filled Tonal Button</item>
+        <item>Filter chip</item>
+        <item>Forward</item>
+        <item>Friends</item>
+        <item>Go to list</item>
+        <item>Headline small styled text</item>
+        <item>Hide Bottom Sheet</item>
+        <item>Hide password</item>
+        <item>Home</item>
+        <item>How should the scaffold handle back navigation?</item>
+        <item>Initial text</item>
+        <item>Input Chip</item>
+        <item>Is animating: </item>
+        <item>Label</item>
+        <item>Label for checkbox</item>
+        <item>Large Extended FAB</item>
+        <item>Large TopAppBar</item>
+        <item>License</item>
+        <item>Like</item>
+        <item>Long-click to change interaction mode.</item>
+        <item>Mark unread</item>
+        <item>Medium Extended FAB</item>
+        <item>Medium TopAppBar</item>
+        <item>Menu</item>
+        <item>Menu button</item>
+        <item>Missed</item>
+        <item>Month</item>
+        <item>More Options</item>
+        <item>Multiline Snackbar Demo</item>
+        <item>My Button</item>
+        <item>My content</item>
+        <item>Navigation</item>
+        <item>New notification</item>
+        <item>Next</item>
+        <item>No item selected</item>
+        <item>Not Selected</item>
+        <item>OFF</item>
+        <item>OK</item>
+        <item>ON</item>
+        <item>Ok</item>
+        <item>One line list item with 24x24 icon</item>
+        <item>Open dialog</item>
+        <item>Open nav drawer</item>
+        <item>Opens menu</item>
+        <item>Option selection</item>
+        <item>Outlined Button</item>
+        <item>Overflow</item>
+        <item>Permissions</item>
+        <item>Person</item>
+        <item>Phone number</item>
+        <item>Playlists</item>
+        <item>Receive Emails</item>
+        <item>Reply</item>
+        <item>Reply all</item>
+        <item>Request Access</item>
+        <item>Restaurant</item>
+        <item>Save</item>
+        <item>Saved</item>
+        <item>Scaffold Content</item>
+        <item>Search</item>
+        <item>Search…</item>
+        <item>Search...</item>
+        <item>Secondary text</item>
+        <item>Secondary text that\nspans multiple lines</item>
+        <item>Select an item from the list.</item>
+        <item>Selected</item>
+        <item>Send Feedback</item>
+        <item>Set Time</item>
+        <item>Set loading progress:</item>
+        <item>Set progress:</item>
+        <item>Settings</item>
+        <item>Sheet content</item>
+        <item>Show All</item>
+        <item>Show Bottom Sheet</item>
+        <item>Show all</item>
+        <item>Show extra</item>
+        <item>Show password</item>
+        <item>Show placeholder even when unfocused</item>
+        <item>Show snackbar</item>
+        <item>Simple Scaffold Screen</item>
+        <item>Simple TopAppBar</item>
+        <item>Skip partially expanded State</item>
+        <item>Small Extended FAB</item>
+        <item>Snackbar demo</item>
+        <item>Snooze</item>
+        <item>Songs</item>
+        <item>Subtitle</item>
+        <item>Suggestion Chip</item>
+        <item>Supporting text that is long and perhaps goes onto another line.</item>
+        <item>Swipe me left or right!</item>
+        <item>Swipe up to expand sheet</item>
+        <item>Tab</item>
+        <item>Tab &amp; icon</item>
+        <item>Tab 1</item>
+        <item>Tab 2</item>
+        <item>Tab 3</item>
+        <item>Tab 3 with lots of text</item>
+        <item>Tap to focus</item>
+        <item>Text Button</item>
+        <item>Text field</item>
+        <item>Text input too long</item>
+        <item>Text on Surface</item>
+        <item>The trailing icon has a separate click action</item>
+        <item>Three line list item</item>
+        <item>Thumbs down</item>
+        <item>Thumbs up</item>
+        <item>Title</item>
+        <item>Toggle Button</item>
+        <item>Toggle menu</item>
+        <item>Tonal Button</item>
+        <item>TopAppBar</item>
+        <item>Trigger Refresh</item>
+        <item>Turned on by default</item>
+        <item>Two line list item with trailing</item>
+        <item>Username</item>
+        <item>Username*</item>
+        <item>Visit go/permissions for details</item>
+        <item>Week</item>
+        <item>Weekly</item>
+        <item>Work</item>
+        <item>You can add and remove service account members and assign roles to them. </item>
+        <item>content</item>
+        <item>welcome</item>
+        <item>&gt;&gt;&gt; Swipe &gt;&gt;&gt;</item>
+        <item>&lt;&lt;&lt; Swipe &lt;&lt;&lt;</item>
+        <item>Localized Description</item>
+        <item>Localized description</item>
+        <item>Account</item>
+        <item>Mic</item>
+        <item>Star</item>
+        <item>Scrim</item>
+        <item>Hide/show navigation component</item>
+        <item>Trailing Icon Rotation</item>
+    </string-array>
+    <string-array name="sample_text_translation">
+        <item>Button</item>
+    </string-array>
+</resources>

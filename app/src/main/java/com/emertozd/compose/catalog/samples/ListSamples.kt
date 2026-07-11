@@ -34,14 +34,15 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.SegmentedListItem
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
+import com.emertozd.compose.catalog.samples.localization.localizedAccessibilityString
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -345,7 +346,14 @@ fun SegmentedListItemWithExpansionSample() {
         SegmentedListItem(
             onClick = { expanded = !expanded },
             modifier =
-                Modifier.semantics { stateDescription = if (expanded) "Expanded" else "Collapsed" },
+                Modifier.semantics {
+                    stateDescription =
+                        if (expanded) {
+                            localizedAccessibilityString("Expanded")
+                        } else {
+                            localizedAccessibilityString("Collapsed")
+                        }
+                },
             colors = colors,
             shapes = ListItemDefaults.segmentedShapes(index = 0, count = itemCount),
             leadingContent = { Icon(Icons.Default.Favorite, contentDescription = null) },

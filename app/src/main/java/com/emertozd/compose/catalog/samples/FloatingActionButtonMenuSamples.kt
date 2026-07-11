@@ -36,8 +36,8 @@ import androidx.compose.material.icons.filled.Snooze
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.FloatingActionButtonMenu
 import androidx.compose.material3.FloatingActionButtonMenuItem
-import androidx.compose.material3.Icon
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Icon
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.material3.ToggleFloatingActionButton
 import androidx.compose.material3.ToggleFloatingActionButtonDefaults.animateIcon
 import androidx.compose.material3.animateFloatingActionButton
@@ -69,6 +69,8 @@ import androidx.compose.ui.semantics.traversalIndex
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.emertozd.compose.catalog.library.Sampled
+import com.emertozd.compose.catalog.samples.localization.localizedString
+import com.emertozd.compose.catalog.samples.localization.localizedAccessibilityString
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Preview
@@ -81,7 +83,10 @@ fun FloatingActionButtonMenuSample() {
             listState.firstVisibleItemIndex == 0 || listState.canScrollForward == false
         }
     }
-    val focusRequester = FocusRequester()
+    val focusRequester = remember { FocusRequester() }
+    val expandedDescription = localizedString("Expanded")
+    val collapsedDescription = localizedString("Collapsed")
+    val toggleMenuDescription = localizedString("Toggle menu")
 
     Box {
         LazyColumn(state = listState, modifier = Modifier.fillMaxSize()) {
@@ -117,8 +122,9 @@ fun FloatingActionButtonMenuSample() {
                     modifier =
                         Modifier.semantics {
                             traversalIndex = -1f
-                            stateDescription = if (fabMenuExpanded) "Expanded" else "Collapsed"
-                            contentDescription = "Toggle menu"
+                            stateDescription =
+                                if (fabMenuExpanded) expandedDescription else collapsedDescription
+                            contentDescription = toggleMenuDescription
                         }
                             .animateFloatingActionButton(
                                 visible = fabVisible || fabMenuExpanded,
@@ -153,7 +159,7 @@ fun FloatingActionButtonMenuSample() {
                                 customActions =
                                     listOf(
                                         CustomAccessibilityAction(
-                                            label = "Close menu",
+                                            label = localizedAccessibilityString("Close menu"),
                                             action = {
                                                 fabMenuExpanded = false
                                                 true

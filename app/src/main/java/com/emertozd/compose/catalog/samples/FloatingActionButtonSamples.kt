@@ -31,7 +31,7 @@ import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.LargeExtendedFloatingActionButton
 import androidx.compose.material3.LargeFloatingActionButton
 import androidx.compose.material3.MediumExtendedFloatingActionButton
@@ -39,7 +39,7 @@ import androidx.compose.material3.MediumFloatingActionButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SmallExtendedFloatingActionButton
 import androidx.compose.material3.SmallFloatingActionButton
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.material3.animateFloatingActionButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf

@@ -21,7 +21,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TimeInput
 import androidx.compose.material3.TimePicker
@@ -44,9 +44,8 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.emertozd.compose.catalog.library.Sampled
-import java.text.SimpleDateFormat
+import java.text.DateFormat
 import java.util.Calendar
-import java.util.Locale
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -56,7 +55,8 @@ import kotlinx.coroutines.launch
 fun TimePickerSample() {
     var showTimePicker by remember { mutableStateOf(false) }
     val state = rememberTimePickerState()
-    val formatter = remember { SimpleDateFormat("hh:mm a", Locale.getDefault()) }
+    val locale = LocalConfiguration.current.locales[0]
+    val formatter = remember(locale) { DateFormat.getTimeInstance(DateFormat.SHORT, locale) }
     val snackState = remember { SnackbarHostState() }
     val snackScope = rememberCoroutineScope()
 
@@ -104,7 +104,8 @@ fun TimePickerSample() {
 fun TimeInputSample() {
     var showTimePicker by remember { mutableStateOf(false) }
     val state = rememberTimePickerState()
-    val formatter = remember { SimpleDateFormat("hh:mm a", Locale.getDefault()) }
+    val locale = LocalConfiguration.current.locales[0]
+    val formatter = remember(locale) { DateFormat.getTimeInstance(DateFormat.SHORT, locale) }
     val snackState = remember { SnackbarHostState() }
     val snackScope = rememberCoroutineScope()
 
@@ -150,7 +151,8 @@ fun TimeInputSample() {
 fun TimePickerSwitchableSample() {
     var showTimePicker by remember { mutableStateOf(false) }
     val state = rememberTimePickerState()
-    val formatter = remember { SimpleDateFormat("hh:mm a", Locale.getDefault()) }
+    val locale = LocalConfiguration.current.locales[0]
+    val formatter = remember(locale) { DateFormat.getTimeInstance(DateFormat.SHORT, locale) }
     val snackState = remember { SnackbarHostState() }
     var displayMode by remember { mutableStateOf(TimePickerDisplayMode.Picker) }
     val snackScope = rememberCoroutineScope()

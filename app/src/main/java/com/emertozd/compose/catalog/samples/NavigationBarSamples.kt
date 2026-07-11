@@ -27,14 +27,14 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.StarBorder
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationItemIconPosition
 import androidx.compose.material3.ShortNavigationBar
 import androidx.compose.material3.ShortNavigationBarArrangement
 import androidx.compose.material3.ShortNavigationBarItem
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf

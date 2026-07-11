@@ -36,11 +36,12 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
+import com.emertozd.compose.catalog.samples.localization.Icon
 import androidx.compose.material3.PlainTooltip
 import androidx.compose.material3.SplitButtonDefaults
 import androidx.compose.material3.SplitButtonLayout
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
+import com.emertozd.compose.catalog.samples.localization.localizedAccessibilityString
 import androidx.compose.material3.TooltipAnchorPosition
 import androidx.compose.material3.TooltipBox
 import androidx.compose.material3.TooltipDefaults
@@ -92,7 +93,7 @@ fun FilledSplitButtonSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                 ) {
@@ -189,7 +190,7 @@ fun SplitButtonWithDropdownMenuSample() {
                         onCheckedChange = { checked = it },
                         modifier =
                             Modifier.semantics {
-                                stateDescription = if (checked) "Expanded" else "Collapsed"
+                                stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                                 contentDescription = description
                             },
                     ) {
@@ -266,7 +267,7 @@ fun TonalSplitButtonSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                 ) {
@@ -322,7 +323,7 @@ fun ElevatedSplitButtonSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                 ) {
@@ -378,7 +379,7 @@ fun OutlinedSplitButtonSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                 ) {
@@ -426,7 +427,7 @@ fun SplitButtonWithTextSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                 ) {
@@ -489,7 +490,7 @@ fun SplitButtonWithIconSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                 ) {
@@ -551,7 +552,7 @@ fun XSmallFilledSplitButtonSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.heightIn(size).semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                     shapes = SplitButtonDefaults.trailingButtonShapesFor(size),
@@ -614,7 +615,7 @@ fun MediumFilledSplitButtonSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.heightIn(size).semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                     shapes = SplitButtonDefaults.trailingButtonShapesFor(size),
@@ -677,7 +678,7 @@ fun LargeFilledSplitButtonSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.heightIn(size).semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                     shapes = SplitButtonDefaults.trailingButtonShapesFor(size),
@@ -740,7 +741,7 @@ fun ExtraLargeFilledSplitButtonSample() {
                     onCheckedChange = { checked = it },
                     modifier =
                         Modifier.heightIn(size).semantics {
-                            stateDescription = if (checked) "Expanded" else "Collapsed"
+                            stateDescription = if (checked) localizedAccessibilityString("Expanded") else localizedAccessibilityString("Collapsed")
                             contentDescription = description
                         },
                     shapes = SplitButtonDefaults.trailingButtonShapesFor(size),

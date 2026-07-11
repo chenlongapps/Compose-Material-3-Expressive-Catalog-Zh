@@ -19,7 +19,7 @@ package com.emertozd.compose.catalog.samples
 import com.emertozd.compose.catalog.library.Sampled
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import com.emertozd.compose.catalog.samples.localization.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

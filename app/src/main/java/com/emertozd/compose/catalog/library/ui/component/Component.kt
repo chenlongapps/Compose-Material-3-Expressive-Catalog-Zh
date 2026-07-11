@@ -45,6 +45,8 @@ import com.emertozd.compose.catalog.R
 import com.emertozd.compose.catalog.library.model.Component
 import com.emertozd.compose.catalog.library.model.Example
 import com.emertozd.compose.catalog.library.model.Theme
+import com.emertozd.compose.catalog.library.model.localizedDescription
+import com.emertozd.compose.catalog.library.model.localizedName
 import com.emertozd.compose.catalog.library.ui.common.CatalogScaffold
 import com.emertozd.compose.catalog.library.ui.example.ExampleItem
 
@@ -60,7 +62,7 @@ fun Component(
 ) {
     val ltr = LocalLayoutDirection.current
     CatalogScaffold(
-        topBarTitle = component.name,
+        topBarTitle = component.localizedName(),
         showBackNavigationIcon = true,
         theme = theme,
         guidelinesUrl = component.guidelinesUrl,
@@ -105,7 +107,10 @@ fun Component(
                     style = MaterialTheme.typography.bodyLarge,
                 )
                 Spacer(modifier = Modifier.height(ComponentPadding))
-                Text(text = component.description, style = MaterialTheme.typography.bodyMedium)
+                Text(
+                    text = component.localizedDescription(),
+                    style = MaterialTheme.typography.bodyMedium,
+                )
                 Spacer(modifier = Modifier.height(ComponentDescriptionPadding))
             }
             item {
@@ -127,6 +132,7 @@ fun Component(
                 items(filteredExamples) { example ->
                     ExampleItem(
                         example = example,
+                        componentName = component.localizedName(),
                         markExpressiveComponents = theme.markExpressiveComponents,
                         onClick = onExampleClick,
                     )

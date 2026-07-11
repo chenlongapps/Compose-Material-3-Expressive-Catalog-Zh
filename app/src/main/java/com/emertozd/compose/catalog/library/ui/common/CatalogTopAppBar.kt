@@ -58,6 +58,7 @@ fun CatalogTopAppBar(
     favorite: Boolean = false,
     onFavoriteClick: () -> Unit = {},
     onThemeClick: () -> Unit = {},
+    onLanguageClick: () -> Unit = {},
     onGuidelinesClick: () -> Unit = {},
     onDocsClick: () -> Unit = {},
     onSourceClick: () -> Unit = {},
@@ -115,6 +116,10 @@ fun CatalogTopAppBar(
                         onSourceClick()
                         moreMenuExpanded = false
                     },
+                    onLanguageClick = {
+                        onLanguageClick()
+                        moreMenuExpanded = false
+                    },
                     onIssueClick = {
                         onIssueClick()
                         moreMenuExpanded = false
@@ -159,6 +164,7 @@ private fun MoreMenu(
     onTermsClick: () -> Unit,
     onPrivacyClick: () -> Unit,
     onLicensesClick: () -> Unit,
+    onLanguageClick: () -> Unit,
 ) {
     DropdownMenu(expanded = expanded, onDismissRequest = onDismissRequest) {
         DropdownMenuItem(
@@ -172,6 +178,10 @@ private fun MoreMenu(
         DropdownMenuItem(
             text = { Text(stringResource(id = R.string.view_source_code)) },
             onClick = onSourceClick,
+        )
+        DropdownMenuItem(
+            text = { Text(stringResource(id = R.string.language)) },
+            onClick = onLanguageClick,
         )
         HorizontalDivider()
         DropdownMenuItem(
