@@ -43,7 +43,6 @@ import com.emertozd.compose.catalog.library.ui.common.ItemBanner
 @Composable
 fun ExampleItem(
     example: Example,
-    componentName: String,
     markExpressiveComponents: Boolean,
     onClick: (example: Example) -> Unit,
 ) {
@@ -54,11 +53,7 @@ fun ExampleItem(
                     Text(text = example.name, style = MaterialTheme.typography.titleSmall)
                     Spacer(modifier = Modifier.height(ExampleItemTextPadding))
                     Text(
-                        text =
-                            stringResource(
-                                R.string.component_examples_description,
-                                componentName,
-                            ),
+                        text = stringResource(example.description),
                         style = MaterialTheme.typography.bodySmall,
                     )
                 }

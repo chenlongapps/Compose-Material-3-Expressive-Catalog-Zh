@@ -18,6 +18,9 @@
 
 package com.emertozd.compose.catalog.library.model
 
+import androidx.annotation.StringRes
+import com.emertozd.compose.catalog.R
+
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
@@ -309,19 +312,18 @@ import com.emertozd.compose.catalog.samples.XSmallToggleButtonWithIconSample
 
 data class Example(
     val name: String,
-    val description: String,
+    @param:StringRes val description: Int,
     val sourceUrl: String,
     val isExpressive: Boolean,
     val content: @Composable () -> Unit,
 )
 
-private const val AdaptiveExampleDescription = "Adaptive examples"
 private const val AdaptiveExampleSourceUrl = "$AdaptiveSampleSourceUrl/ThreePaneScaffoldSamples.kt"
 val AdaptiveExamples =
     listOf(
         Example(
             name = "ListDetailPaneScaffoldSample",
-            description = AdaptiveExampleDescription,
+            description = R.string.example_list_detail_pane_scaffold_sample_description,
             sourceUrl = AdaptiveExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -329,7 +331,7 @@ val AdaptiveExamples =
         },
         Example(
             name = "ListDetailPaneScaffoldSampleWithExtraPane",
-            description = AdaptiveExampleDescription,
+            description = R.string.example_list_detail_pane_scaffold_sample_with_extra_pane_description,
             sourceUrl = AdaptiveExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -337,7 +339,7 @@ val AdaptiveExamples =
         },
         Example(
             name = "ListDetailPaneScaffoldSampleWithExtraPaneLevitatedAsDialog",
-            description = AdaptiveExampleDescription,
+            description = R.string.example_list_detail_pane_scaffold_sample_with_extra_pane_levitated_as_dialog_description,
             sourceUrl = AdaptiveExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -345,7 +347,7 @@ val AdaptiveExamples =
         },
         Example(
             name = "SupportingPaneScaffoldSample",
-            description = AdaptiveExampleDescription,
+            description = R.string.example_supporting_pane_scaffold_sample_description,
             sourceUrl = AdaptiveExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -353,7 +355,7 @@ val AdaptiveExamples =
         },
         Example(
             name = "SupportingPaneScaffoldSampleWithExtraPaneLevitatedAsBottomSheet",
-            description = AdaptiveExampleDescription,
+            description = R.string.example_supporting_pane_scaffold_sample_with_extra_pane_levitated_as_bottom_sheet_description,
             sourceUrl = AdaptiveExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -361,7 +363,7 @@ val AdaptiveExamples =
         },
         Example(
             name = "ListDetailWithNavigation2Sample",
-            description = AdaptiveExampleDescription,
+            description = R.string.example_list_detail_with_navigation2_sample_description,
             sourceUrl = AdaptiveExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -369,7 +371,7 @@ val AdaptiveExamples =
         },
         Example(
             name = "ListDetailWithNavigation3Sample",
-            description = AdaptiveExampleDescription,
+            description = R.string.example_list_detail_with_navigation3_sample_description,
             sourceUrl = AdaptiveExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -377,13 +379,12 @@ val AdaptiveExamples =
         },
     )
 
-private const val BadgeExampleDescription = "Badge examples"
 private const val BadgeExampleSourceUrl = "$SampleSourceUrl/BadgeSamples.kt"
 val BadgeExamples =
     listOf(
         Example(
             name = "NavigationBarItemWithBadge",
-            description = BadgeExampleDescription,
+            description = R.string.example_navigation_bar_item_with_badge_description,
             sourceUrl = BadgeExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -391,13 +392,12 @@ val BadgeExamples =
         }
     )
 
-private const val BottomSheetExampleDescription = "Bottom Sheet examples"
 private const val BottomSheetExampleSourceUrl = "$SampleSourceUrl/BottomSheetSamples.kt"
 val BottomSheetExamples =
     listOf(
         Example(
             name = "ModalBottomSheetSample",
-            description = BottomSheetExampleDescription,
+            description = R.string.example_modal_bottom_sheet_sample_description,
             sourceUrl = BottomSheetExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -405,7 +405,7 @@ val BottomSheetExamples =
         },
         Example(
             name = "SimpleBottomSheetScaffoldSample",
-            description = BottomSheetExampleDescription,
+            description = R.string.example_simple_bottom_sheet_scaffold_sample_description,
             sourceUrl = BottomSheetExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -413,7 +413,7 @@ val BottomSheetExamples =
         },
         Example(
             name = "BottomSheetScaffoldNestedScrollSample",
-            description = BottomSheetExampleDescription,
+            description = R.string.example_bottom_sheet_scaffold_nested_scroll_sample_description,
             sourceUrl = BottomSheetExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -421,13 +421,12 @@ val BottomSheetExamples =
         },
     )
 
-private const val ButtonsExampleDescription = "Button examples"
 private const val ButtonsExampleSourceUrl = "$SampleSourceUrl/ButtonSamples.kt"
 val ButtonsExamples =
     listOf(
         Example(
             name = "ButtonSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_button_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -435,7 +434,7 @@ val ButtonsExamples =
         },
         Example(
             name = "ButtonWithAnimatedShapeSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_button_with_animated_shape_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -443,7 +442,7 @@ val ButtonsExamples =
         },
         Example(
             name = "SquareButtonSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_square_button_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -451,7 +450,7 @@ val ButtonsExamples =
         },
         Example(
             name = "SmallButtonSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_small_button_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -459,7 +458,7 @@ val ButtonsExamples =
         },
         Example(
             name = "ElevatedButtonSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_elevated_button_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -467,7 +466,7 @@ val ButtonsExamples =
         },
         Example(
             name = "ElevatedButtonWithAnimatedShapeSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_elevated_button_with_animated_shape_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -475,7 +474,7 @@ val ButtonsExamples =
         },
         Example(
             name = "FilledTonalButtonSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_filled_tonal_button_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -483,7 +482,7 @@ val ButtonsExamples =
         },
         Example(
             name = "FilledTonalButtonWithAnimatedShapeSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_filled_tonal_button_with_animated_shape_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -491,7 +490,7 @@ val ButtonsExamples =
         },
         Example(
             name = "OutlinedButtonSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_outlined_button_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -499,7 +498,7 @@ val ButtonsExamples =
         },
         Example(
             name = "OutlinedButtonWithAnimatedShapeSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_outlined_button_with_animated_shape_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -507,7 +506,7 @@ val ButtonsExamples =
         },
         Example(
             name = "TextButtonSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_text_button_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -515,7 +514,7 @@ val ButtonsExamples =
         },
         Example(
             name = "TextButtonWithAnimatedShapeSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_text_button_with_animated_shape_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -523,7 +522,7 @@ val ButtonsExamples =
         },
         Example(
             name = "ButtonWithIconSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_button_with_icon_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -531,7 +530,7 @@ val ButtonsExamples =
         },
         Example(
             name = "XSmallButtonWithIconSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_x_small_button_with_icon_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -539,7 +538,7 @@ val ButtonsExamples =
         },
         Example(
             name = "MediumButtonWithIconSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_medium_button_with_icon_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -547,7 +546,7 @@ val ButtonsExamples =
         },
         Example(
             name = "LargeButtonWithIconSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_large_button_with_icon_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -555,7 +554,7 @@ val ButtonsExamples =
         },
         Example(
             name = "XLargeButtonWithIconSample",
-            description = ButtonsExampleDescription,
+            description = R.string.example_x_large_button_with_icon_sample_description,
             sourceUrl = ButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -563,13 +562,12 @@ val ButtonsExamples =
         },
     )
 
-private const val ButtonGroupsExampleDescription = "ButtonGroup examples"
 private const val ButtonGroupsExampleSourceUrl = "$SampleSourceUrl/ButtonGroupSamples.kt"
 val ButtonGroupsExamples =
     listOf(
         Example(
             name = "ButtonGroupSample",
-            description = ButtonGroupsExampleDescription,
+            description = R.string.example_button_group_sample_description,
             sourceUrl = ButtonGroupsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -577,7 +575,7 @@ val ButtonGroupsExamples =
         },
         Example(
             name = "SingleSelectConnectedButtonGroupWithFlowLayoutSample",
-            description = ButtonGroupsExampleDescription,
+            description = R.string.example_single_select_connected_button_group_with_flow_layout_sample_description,
             sourceUrl = ButtonGroupsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -585,7 +583,7 @@ val ButtonGroupsExamples =
         },
         Example(
             name = "MultiSelectConnectedButtonGroupWithFlowLayoutSample",
-            description = ButtonGroupsExampleDescription,
+            description = R.string.example_multi_select_connected_button_group_with_flow_layout_sample_description,
             sourceUrl = ButtonGroupsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -593,7 +591,7 @@ val ButtonGroupsExamples =
         },
         Example(
             name = "VerticalButtonGroupSample",
-            description = ButtonGroupsExampleDescription,
+            description = R.string.example_vertical_button_group_sample_description,
             sourceUrl = ButtonGroupsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -601,13 +599,12 @@ val ButtonGroupsExamples =
         },
     )
 
-private const val CardsExampleDescription = "Cards examples"
 private const val CardsExampleSourceUrl = "$SampleSourceUrl/CardSamples.kt"
 val CardExamples =
     listOf(
         Example(
             name = "CardSample",
-            description = CardsExampleDescription,
+            description = R.string.example_card_sample_description,
             sourceUrl = CardsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -615,7 +612,7 @@ val CardExamples =
         },
         Example(
             name = "ClickableCardSample",
-            description = CardsExampleDescription,
+            description = R.string.example_clickable_card_sample_description,
             sourceUrl = CardsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -623,7 +620,7 @@ val CardExamples =
         },
         Example(
             name = "ElevatedCardSample",
-            description = CardsExampleDescription,
+            description = R.string.example_elevated_card_sample_description,
             sourceUrl = CardsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -631,7 +628,7 @@ val CardExamples =
         },
         Example(
             name = "ClickableElevatedCardSample",
-            description = CardsExampleDescription,
+            description = R.string.example_clickable_elevated_card_sample_description,
             sourceUrl = CardsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -639,7 +636,7 @@ val CardExamples =
         },
         Example(
             name = "OutlinedCardSample",
-            description = CardsExampleDescription,
+            description = R.string.example_outlined_card_sample_description,
             sourceUrl = CardsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -647,7 +644,7 @@ val CardExamples =
         },
         Example(
             name = "ClickableOutlinedCardSample",
-            description = CardsExampleDescription,
+            description = R.string.example_clickable_outlined_card_sample_description,
             sourceUrl = CardsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -655,13 +652,12 @@ val CardExamples =
         },
     )
 
-private const val CarouselExampleDescription = "Carousel examples"
 private const val CarouselExampleSourceUrl = "$SampleSourceUrl/CarouselSamples.kt"
 val CarouselExamples =
     listOf(
         Example(
             name = "HorizontalMultiBrowseCarouselSample",
-            description = CarouselExampleDescription,
+            description = R.string.example_horizontal_multi_browse_carousel_sample_description,
             sourceUrl = CarouselExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -669,7 +665,7 @@ val CarouselExamples =
         },
         Example(
             name = "HorizontalUncontainedCarouselSample",
-            description = CarouselExampleDescription,
+            description = R.string.example_horizontal_uncontained_carousel_sample_description,
             sourceUrl = CarouselExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -677,7 +673,7 @@ val CarouselExamples =
         },
         Example(
             name = "HorizontalCenteredHeroCarouselSample",
-            description = CarouselExampleDescription,
+            description = R.string.example_horizontal_centered_hero_carousel_sample_description,
             sourceUrl = CarouselExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -685,7 +681,7 @@ val CarouselExamples =
         },
         Example(
             name = "FadingHorizontalMultiBrowseCarouselSample",
-            description = CarouselExampleDescription,
+            description = R.string.example_fading_horizontal_multi_browse_carousel_sample_description,
             sourceUrl = CarouselExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -693,7 +689,7 @@ val CarouselExamples =
         },
         Example(
             name = "CarouselWithShowAllButtonSample",
-            description = CarouselExampleDescription,
+            description = R.string.example_carousel_with_show_all_button_sample_description,
             sourceUrl = CarouselExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -701,7 +697,7 @@ val CarouselExamples =
         },
         Example(
             name = "MultiAspectCarouselLazyRowSample",
-            description = CarouselExampleDescription,
+            description = R.string.example_multi_aspect_carousel_lazy_row_sample_description,
             sourceUrl = CarouselExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -709,13 +705,12 @@ val CarouselExamples =
         },
     )
 
-private const val CheckboxesExampleDescription = "Checkboxes examples"
 private const val CheckboxesExampleSourceUrl = "$SampleSourceUrl/CheckboxSamples.kt"
 val CheckboxesExamples =
     listOf(
         Example(
             name = "CheckboxSample",
-            description = CheckboxesExampleDescription,
+            description = R.string.example_checkbox_sample_description,
             sourceUrl = CheckboxesExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -723,7 +718,7 @@ val CheckboxesExamples =
         },
         Example(
             name = "CheckboxWithTextSample",
-            description = CheckboxesExampleDescription,
+            description = R.string.example_checkbox_with_text_sample_description,
             sourceUrl = CheckboxesExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -731,7 +726,7 @@ val CheckboxesExamples =
         },
         Example(
             name = "CheckboxRoundedStrokesSample",
-            description = CheckboxesExampleDescription,
+            description = R.string.example_checkbox_rounded_strokes_sample_description,
             sourceUrl = CheckboxesExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -739,7 +734,7 @@ val CheckboxesExamples =
         },
         Example(
             name = "TriStateCheckboxSample",
-            description = CheckboxesExampleDescription,
+            description = R.string.example_tri_state_checkbox_sample_description,
             sourceUrl = CheckboxesExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -747,7 +742,7 @@ val CheckboxesExamples =
         },
         Example(
             name = "TriStateCheckboxRoundedStrokesSample",
-            description = CheckboxesExampleDescription,
+            description = R.string.example_tri_state_checkbox_rounded_strokes_sample_description,
             sourceUrl = CheckboxesExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -755,13 +750,12 @@ val CheckboxesExamples =
         },
     )
 
-private const val ChipsExampleDescription = "Chips examples"
 private const val ChipsExampleSourceUrl = "$SampleSourceUrl/ChipSamples.kt"
 val ChipsExamples =
     listOf(
         Example(
             name = "AssistChipSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_assist_chip_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -769,7 +763,7 @@ val ChipsExamples =
         },
         Example(
             name = "ElevatedAssistChipSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_elevated_assist_chip_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -777,7 +771,7 @@ val ChipsExamples =
         },
         Example(
             name = "FilterChipSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_filter_chip_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -785,7 +779,7 @@ val ChipsExamples =
         },
         Example(
             name = "ElevatedFilterChipSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_elevated_filter_chip_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -793,7 +787,7 @@ val ChipsExamples =
         },
         Example(
             name = "FilterChipWithLeadingIconSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_filter_chip_with_leading_icon_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -801,7 +795,7 @@ val ChipsExamples =
         },
         Example(
             name = "FilterChipWithTrailingIconSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_filter_chip_with_trailing_icon_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -809,7 +803,7 @@ val ChipsExamples =
         },
         Example(
             name = "FilterChipWithCustomSpacingSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_filter_chip_with_custom_spacing_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -817,7 +811,7 @@ val ChipsExamples =
         },
         Example(
             name = "InputChipSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_input_chip_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -825,7 +819,7 @@ val ChipsExamples =
         },
         Example(
             name = "InputChipWithAvatarSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_input_chip_with_avatar_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -833,7 +827,7 @@ val ChipsExamples =
         },
         Example(
             name = "SuggestionChipSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_suggestion_chip_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -841,7 +835,7 @@ val ChipsExamples =
         },
         Example(
             name = "ElevatedSuggestionChipSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_elevated_suggestion_chip_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -849,7 +843,7 @@ val ChipsExamples =
         },
         Example(
             name = "ChipGroupSingleLineSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_chip_group_single_line_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -857,7 +851,7 @@ val ChipsExamples =
         },
         Example(
             name = "ChipGroupReflowSample",
-            description = ChipsExampleDescription,
+            description = R.string.example_chip_group_reflow_sample_description,
             sourceUrl = ChipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -865,13 +859,12 @@ val ChipsExamples =
         },
     )
 
-private const val DatePickerExampleDescription = "Date picker examples"
 private const val DatePickerExampleSourceUrl = "$SampleSourceUrl/DatePickerSamples.kt"
 val DatePickerExamples =
     listOf(
         Example(
             name = "DatePickerSample",
-            description = DatePickerExampleDescription,
+            description = R.string.example_date_picker_sample_description,
             sourceUrl = DatePickerExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -879,7 +872,7 @@ val DatePickerExamples =
         },
         Example(
             name = "DatePickerDialogSample",
-            description = DatePickerExampleDescription,
+            description = R.string.example_date_picker_dialog_sample_description,
             sourceUrl = DatePickerExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -887,7 +880,7 @@ val DatePickerExamples =
         },
         Example(
             name = "DatePickerWithDateSelectableDatesSample",
-            description = DatePickerExampleDescription,
+            description = R.string.example_date_picker_with_date_selectable_dates_sample_description,
             sourceUrl = DatePickerExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -895,7 +888,7 @@ val DatePickerExamples =
         },
         Example(
             name = "DateInputSample",
-            description = DatePickerExampleDescription,
+            description = R.string.example_date_input_sample_description,
             sourceUrl = DatePickerExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -903,7 +896,7 @@ val DatePickerExamples =
         },
         Example(
             name = "DateRangePickerSample",
-            description = DatePickerExampleDescription,
+            description = R.string.example_date_range_picker_sample_description,
             sourceUrl = DatePickerExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -911,13 +904,12 @@ val DatePickerExamples =
         },
     )
 
-private const val DialogExampleDescription = "Dialog examples"
 private const val DialogExampleSourceUrl = "$SampleSourceUrl/AlertDialogSamples.kt"
 val DialogExamples =
     listOf(
         Example(
             name = "AlertDialogSample",
-            description = DialogExampleDescription,
+            description = R.string.example_alert_dialog_sample_description,
             sourceUrl = DialogExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -925,7 +917,7 @@ val DialogExamples =
         },
         Example(
             name = "AlertDialogWithIconSample",
-            description = DialogExampleDescription,
+            description = R.string.example_alert_dialog_with_icon_sample_description,
             sourceUrl = DialogExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -933,7 +925,7 @@ val DialogExamples =
         },
         Example(
             name = "BasicAlertDialogSample",
-            description = DialogExampleDescription,
+            description = R.string.example_basic_alert_dialog_sample_description,
             sourceUrl = DialogExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -941,13 +933,12 @@ val DialogExamples =
         },
     )
 
-private const val BottomAppBarsExampleDescription = "Bottom app bar examples"
 private const val BottomAppBarsExampleSourceUrl = "$SampleSourceUrl/AppBarSamples.kt"
 val BottomAppBarsExamples =
     listOf(
         Example(
             name = "SimpleBottomAppBar",
-            description = BottomAppBarsExampleDescription,
+            description = R.string.example_simple_bottom_app_bar_description,
             sourceUrl = BottomAppBarsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -955,7 +946,7 @@ val BottomAppBarsExamples =
         },
         Example(
             name = "BottomAppBarWithFAB",
-            description = BottomAppBarsExampleDescription,
+            description = R.string.example_bottom_app_bar_with_fab_description,
             sourceUrl = BottomAppBarsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -963,7 +954,7 @@ val BottomAppBarsExamples =
         },
         Example(
             name = "BottomAppBarWithOverflow",
-            description = BottomAppBarsExampleDescription,
+            description = R.string.example_bottom_app_bar_with_overflow_description,
             sourceUrl = BottomAppBarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -971,7 +962,7 @@ val BottomAppBarsExamples =
         },
         Example(
             name = "ExitAlwaysBottomAppBar",
-            description = BottomAppBarsExampleDescription,
+            description = R.string.example_exit_always_bottom_app_bar_description,
             sourceUrl = BottomAppBarsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -979,7 +970,7 @@ val BottomAppBarsExamples =
         },
         Example(
             name = "ExitAlwaysBottomAppBarSpacedAround",
-            description = BottomAppBarsExampleDescription,
+            description = R.string.example_exit_always_bottom_app_bar_spaced_around_description,
             sourceUrl = BottomAppBarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -987,7 +978,7 @@ val BottomAppBarsExamples =
         },
         Example(
             name = "ExitAlwaysBottomAppBarSpacedBetween",
-            description = BottomAppBarsExampleDescription,
+            description = R.string.example_exit_always_bottom_app_bar_spaced_between_description,
             sourceUrl = BottomAppBarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -995,7 +986,7 @@ val BottomAppBarsExamples =
         },
         Example(
             name = "ExitAlwaysBottomAppBarSpacedEvenly",
-            description = BottomAppBarsExampleDescription,
+            description = R.string.example_exit_always_bottom_app_bar_spaced_evenly_description,
             sourceUrl = BottomAppBarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1003,7 +994,7 @@ val BottomAppBarsExamples =
         },
         Example(
             name = "ExitAlwaysBottomAppBarFixed",
-            description = BottomAppBarsExampleDescription,
+            description = R.string.example_exit_always_bottom_app_bar_fixed_description,
             sourceUrl = BottomAppBarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1011,7 +1002,7 @@ val BottomAppBarsExamples =
         },
         Example(
             name = "ExitAlwaysBottomAppBarFixedVibrant",
-            description = BottomAppBarsExampleDescription,
+            description = R.string.example_exit_always_bottom_app_bar_fixed_vibrant_description,
             sourceUrl = BottomAppBarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1019,13 +1010,12 @@ val BottomAppBarsExamples =
         },
     )
 
-private const val TopAppBarExampleDescription = "Top app bar examples"
 private const val TopAppBarExampleSourceUrl = "$SampleSourceUrl/AppBarSamples.kt"
 val TopAppBarExamples =
     listOf(
         Example(
             name = "SimpleTopAppBar",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_simple_top_app_bar_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1033,15 +1023,15 @@ val TopAppBarExamples =
         },
         Example(
             name = "SimpleTopAppBarWithAdaptiveActions",
-            description = TopAppBarExampleDescription,
-            sourceUrl = TopAppBarExampleDescription,
+            description = R.string.example_simple_top_app_bar_with_adaptive_actions_description,
+            sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = false,
         ) {
             SimpleTopAppBarWithAdaptiveActions()
         },
         Example(
             name = "SimpleTopAppBarWithSubtitle",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_simple_top_app_bar_with_subtitle_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1049,7 +1039,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "SimpleCenterAlignedTopAppBar",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_simple_center_aligned_top_app_bar_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1057,7 +1047,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "SimpleCenterAlignedTopAppBarWithSubtitle",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_simple_center_aligned_top_app_bar_with_subtitle_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1065,7 +1055,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "PinnedTopAppBar",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_pinned_top_app_bar_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1073,7 +1063,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "PinnedTopAppBarWithPreScrolledLazyColumn",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_pinned_top_app_bar_with_pre_scrolled_lazy_column_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1081,7 +1071,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "PinnedTopAppBarWithReversedLazyGrid",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_pinned_top_app_bar_with_reversed_lazy_grid_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1089,7 +1079,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "EnterAlwaysTopAppBar",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_enter_always_top_app_bar_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1097,7 +1087,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "EnterAlwaysTopAppBarWithReverseScrolling",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_enter_always_top_app_bar_with_reverse_scrolling_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1105,7 +1095,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "ExitUntilCollapsedMediumTopAppBar",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_exit_until_collapsed_medium_top_app_bar_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1113,7 +1103,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "ExitUntilCollapsedCenterAlignedMediumFlexibleTopAppBar with subtitle",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_exit_until_collapsed_center_aligned_medium_flexible_top_app_bar_with_subtitle_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1121,7 +1111,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "ExitUntilCollapsedLargeTopAppBar",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_exit_until_collapsed_large_top_app_bar_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1129,7 +1119,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "ExitUntilCollapsedCenterAlignedLargeFlexibleTopAppBar with subtitle",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_exit_until_collapsed_center_aligned_large_flexible_top_app_bar_with_subtitle_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1137,7 +1127,7 @@ val TopAppBarExamples =
         },
         Example(
             name = "CustomTwoRowsTopAppBar",
-            description = TopAppBarExampleDescription,
+            description = R.string.example_custom_two_rows_top_app_bar_description,
             sourceUrl = TopAppBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1145,14 +1135,13 @@ val TopAppBarExamples =
         },
     )
 
-private const val FloatingToolbarsExampleDescription = "Floating toolbar examples"
 private const val FloatingToolbarsExampleSourceUrl = "$SampleSourceUrl/FloatingToolbarSamples.kt"
 
 val FloatingToolbarsExamples =
     listOf(
         Example(
             name = "ExpandableHorizontalFloatingToolbarSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_expandable_horizontal_floating_toolbar_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1160,7 +1149,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "OverflowingHorizontalFloatingToolbarSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_overflowing_horizontal_floating_toolbar_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1168,7 +1157,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "ScrollableHorizontalFloatingToolbarSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_scrollable_horizontal_floating_toolbar_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1176,7 +1165,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "ExpandableVerticalFloatingToolbarSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_expandable_vertical_floating_toolbar_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1184,7 +1173,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "OverflowingVerticalFloatingToolbarSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_overflowing_vertical_floating_toolbar_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1192,7 +1181,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "ScrollableVerticalFloatingToolbarSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_scrollable_vertical_floating_toolbar_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1200,7 +1189,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "HorizontalFloatingToolbarWithFabSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_horizontal_floating_toolbar_with_fab_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1208,7 +1197,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "CenteredHorizontalFloatingToolbarWithFabSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_centered_horizontal_floating_toolbar_with_fab_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1216,7 +1205,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "HorizontalFloatingToolbarAsScaffoldFabSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_horizontal_floating_toolbar_as_scaffold_fab_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1224,7 +1213,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "VerticalFloatingToolbarWithFabSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_vertical_floating_toolbar_with_fab_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1232,7 +1221,7 @@ val FloatingToolbarsExamples =
         },
         Example(
             name = "CenteredVerticalFloatingToolbarWithFabSample",
-            description = FloatingToolbarsExampleDescription,
+            description = R.string.example_centered_vertical_floating_toolbar_with_fab_sample_description,
             sourceUrl = FloatingToolbarsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1240,13 +1229,12 @@ val FloatingToolbarsExamples =
         },
     )
 
-private const val ExtendedFABExampleDescription = "Extended FAB examples"
 private const val ExtendedFABExampleSourceUrl = "$SampleSourceUrl/FloatingActionButtonSamples.kt"
 val ExtendedFABExamples =
     listOf(
         Example(
             name = "ExtendedFloatingActionButtonSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_extended_floating_action_button_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1254,7 +1242,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "SmallExtendedFloatingActionButtonSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_small_extended_floating_action_button_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1262,7 +1250,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "MediumExtendedFloatingActionButtonSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_medium_extended_floating_action_button_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1270,7 +1258,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "LargeExtendedFloatingActionButtonSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_large_extended_floating_action_button_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1278,7 +1266,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "ExtendedFloatingActionButtonTextSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_extended_floating_action_button_text_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1286,7 +1274,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "SmallExtendedFloatingActionButtonTextSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_small_extended_floating_action_button_text_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1294,7 +1282,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "MediumExtendedFloatingActionButtonTextSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_medium_extended_floating_action_button_text_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1302,7 +1290,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "LargeExtendedFloatingActionButtonTextSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_large_extended_floating_action_button_text_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1310,7 +1298,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "AnimatedExtendedFloatingActionButtonSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_animated_extended_floating_action_button_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1318,7 +1306,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "SmallAnimatedExtendedFloatingActionButtonSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_small_animated_extended_floating_action_button_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1326,7 +1314,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "MediumAnimatedExtendedFloatingActionButtonSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_medium_animated_extended_floating_action_button_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1334,7 +1322,7 @@ val ExtendedFABExamples =
         },
         Example(
             name = "LargeAnimatedExtendedFloatingActionButtonSample",
-            description = ExtendedFABExampleDescription,
+            description = R.string.example_large_animated_extended_floating_action_button_sample_description,
             sourceUrl = ExtendedFABExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1342,14 +1330,13 @@ val ExtendedFABExamples =
         },
     )
 
-private const val FloatingActionButtonsExampleDescription = "Floating action button examples"
 private const val FloatingActionButtonsExampleSourceUrl =
     "$SampleSourceUrl/FloatingActionButtonSamples.kt"
 val FloatingActionButtonsExamples =
     listOf(
         Example(
             name = "FloatingActionButtonSample",
-            description = FloatingActionButtonsExampleDescription,
+            description = R.string.example_floating_action_button_sample_description,
             sourceUrl = FloatingActionButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1357,7 +1344,7 @@ val FloatingActionButtonsExamples =
         },
         Example(
             name = "LargeFloatingActionButtonSample",
-            description = FloatingActionButtonsExampleDescription,
+            description = R.string.example_large_floating_action_button_sample_description,
             sourceUrl = FloatingActionButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1365,7 +1352,7 @@ val FloatingActionButtonsExamples =
         },
         Example(
             name = "AnimatedFloatingActionButtonSample",
-            description = FloatingActionButtonsExampleDescription,
+            description = R.string.example_animated_floating_action_button_sample_description,
             sourceUrl = FloatingActionButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1373,7 +1360,7 @@ val FloatingActionButtonsExamples =
         },
         Example(
             name = "MediumFloatingActionButtonSample",
-            description = FloatingActionButtonsExampleDescription,
+            description = R.string.example_medium_floating_action_button_sample_description,
             sourceUrl = FloatingActionButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1381,7 +1368,7 @@ val FloatingActionButtonsExamples =
         },
         Example(
             name = "SmallFloatingActionButtonSample",
-            description = FloatingActionButtonsExampleDescription,
+            description = R.string.example_small_floating_action_button_sample_description,
             sourceUrl = FloatingActionButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1389,14 +1376,13 @@ val FloatingActionButtonsExamples =
         },
     )
 
-private const val FloatingActionButtonMenuExampleDescription = "FAB Menu examples"
 private const val FloatingActionButtonMenuExampleSourceUrl =
     "$SampleSourceUrl/FloatingActionButtonMenuSamples.kt"
 val FloatingActionButtonMenuExamples =
     listOf(
         Example(
             name = "FloatingActionButtonMenuSample",
-            description = FloatingActionButtonMenuExampleDescription,
+            description = R.string.example_floating_action_button_menu_sample_description,
             sourceUrl = FloatingActionButtonMenuExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1404,13 +1390,12 @@ val FloatingActionButtonMenuExamples =
         }
     )
 
-private const val ListsExampleDescription = "List examples"
 private const val ListsExampleSourceUrl = "$SampleSourceUrl/ListSamples.kt"
 val ListsExamples =
     listOf(
         Example(
             name = "OneLineListItem",
-            description = ListsExampleDescription,
+            description = R.string.example_one_line_list_item_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1418,7 +1403,7 @@ val ListsExamples =
         },
         Example(
             name = "TwoLineListItem",
-            description = ListsExampleDescription,
+            description = R.string.example_two_line_list_item_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1426,7 +1411,7 @@ val ListsExamples =
         },
         Example(
             name = "ThreeLineListItemWithOverlineAndSupporting",
-            description = ListsExampleDescription,
+            description = R.string.example_three_line_list_item_with_overline_and_supporting_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1434,7 +1419,7 @@ val ListsExamples =
         },
         Example(
             name = "ThreeLineListItemWithExtendedSupporting",
-            description = ListsExampleDescription,
+            description = R.string.example_three_line_list_item_with_extended_supporting_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1442,7 +1427,7 @@ val ListsExamples =
         },
         Example(
             name = "ClickableListItemSample",
-            description = ListsExampleDescription,
+            description = R.string.example_clickable_list_item_sample_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1450,7 +1435,7 @@ val ListsExamples =
         },
         Example(
             name = "ClickableListItemWithClickableChildSample",
-            description = ListsExampleDescription,
+            description = R.string.example_clickable_list_item_with_clickable_child_sample_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1458,7 +1443,7 @@ val ListsExamples =
         },
         Example(
             name = "SingleSelectionListItemSample",
-            description = ListsExampleDescription,
+            description = R.string.example_single_selection_list_item_sample_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1466,7 +1451,7 @@ val ListsExamples =
         },
         Example(
             name = "MultiSelectionListItemSample",
-            description = ListsExampleDescription,
+            description = R.string.example_multi_selection_list_item_sample_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1474,7 +1459,7 @@ val ListsExamples =
         },
         Example(
             name = "ListItemWithModeChangeOnLongClickSample",
-            description = ListsExampleDescription,
+            description = R.string.example_list_item_with_mode_change_on_long_click_sample_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1482,7 +1467,7 @@ val ListsExamples =
         },
         Example(
             name = "SingleSelectionSegmentedListItemSample",
-            description = ListsExampleDescription,
+            description = R.string.example_single_selection_segmented_list_item_sample_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1490,7 +1475,7 @@ val ListsExamples =
         },
         Example(
             name = "MultiSelectionSegmentedListItemSample",
-            description = ListsExampleDescription,
+            description = R.string.example_multi_selection_segmented_list_item_sample_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1498,7 +1483,7 @@ val ListsExamples =
         },
         Example(
             name = "SegmentedListItemWithExpansionSample",
-            description = ListsExampleDescription,
+            description = R.string.example_segmented_list_item_with_expansion_sample_description,
             sourceUrl = ListsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1506,13 +1491,12 @@ val ListsExamples =
         },
     )
 
-private const val IconButtonExampleDescription = "Icon button examples"
 private const val IconButtonExampleSourceUrl = "$SampleSourceUrl/IconButtonSamples.kt"
 val IconButtonExamples =
     listOf(
         Example(
             name = "IconButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_icon_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1520,7 +1504,7 @@ val IconButtonExamples =
         },
         Example(
             name = "TintedIconButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_tinted_icon_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1528,7 +1512,7 @@ val IconButtonExamples =
         },
         Example(
             name = "IconToggleButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_icon_toggle_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1536,7 +1520,7 @@ val IconButtonExamples =
         },
         Example(
             name = "FilledIconButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_filled_icon_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1544,7 +1528,7 @@ val IconButtonExamples =
         },
         Example(
             name = "FilledIconToggleButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_filled_icon_toggle_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1552,7 +1536,7 @@ val IconButtonExamples =
         },
         Example(
             name = "FilledTonalIconButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_filled_tonal_icon_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1560,7 +1544,7 @@ val IconButtonExamples =
         },
         Example(
             name = "FilledTonalIconToggleButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_filled_tonal_icon_toggle_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1568,7 +1552,7 @@ val IconButtonExamples =
         },
         Example(
             name = "OutlinedIconButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_outlined_icon_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1576,7 +1560,7 @@ val IconButtonExamples =
         },
         Example(
             name = "OutlinedIconToggleButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_outlined_icon_toggle_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1584,7 +1568,7 @@ val IconButtonExamples =
         },
         Example(
             name = "XSmallNarrowSquareIconButtonsSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_x_small_narrow_square_icon_buttons_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1592,7 +1576,7 @@ val IconButtonExamples =
         },
         Example(
             name = "MediumRoundWideIconButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_medium_round_wide_icon_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1600,7 +1584,7 @@ val IconButtonExamples =
         },
         Example(
             name = "LargeRoundUniformOutlinedIconButtonSample",
-            description = IconButtonExampleDescription,
+            description = R.string.example_large_round_uniform_outlined_icon_button_sample_description,
             sourceUrl = IconButtonExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1608,14 +1592,13 @@ val IconButtonExamples =
         },
     )
 
-private const val LoadingIndicatorsExampleDescription = "Loading indicators examples"
 private const val LoadingIndicatorsExampleSourceUrl =
     "$SampleSourceUrl/" + "LoadingIndicatorSamples.kt"
 val LoadingIndicatorsExamples =
     listOf(
         Example(
             name = "LoadingIndicatorSample",
-            description = LoadingIndicatorsExampleDescription,
+            description = R.string.example_loading_indicator_sample_description,
             sourceUrl = LoadingIndicatorsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1623,7 +1606,7 @@ val LoadingIndicatorsExamples =
         },
         Example(
             name = "ContainedLoadingIndicatorSample",
-            description = LoadingIndicatorsExampleDescription,
+            description = R.string.example_contained_loading_indicator_sample_description,
             sourceUrl = LoadingIndicatorsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1631,7 +1614,7 @@ val LoadingIndicatorsExamples =
         },
         Example(
             name = "DeterminateLoadingIndicatorSample",
-            description = LoadingIndicatorsExampleDescription,
+            description = R.string.example_determinate_loading_indicator_sample_description,
             sourceUrl = LoadingIndicatorsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1639,7 +1622,7 @@ val LoadingIndicatorsExamples =
         },
         Example(
             name = "DeterminateContainedLoadingIndicatorSample",
-            description = LoadingIndicatorsExampleDescription,
+            description = R.string.example_determinate_contained_loading_indicator_sample_description,
             sourceUrl = LoadingIndicatorsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1647,7 +1630,7 @@ val LoadingIndicatorsExamples =
         },
         Example(
             name = "LoadingIndicatorPullToRefreshSample",
-            description = LoadingIndicatorsExampleDescription,
+            description = R.string.example_loading_indicator_pull_to_refresh_sample_description,
             sourceUrl = LoadingIndicatorsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1655,13 +1638,12 @@ val LoadingIndicatorsExamples =
         },
     )
 
-private const val MenusExampleDescription = "Menus examples"
 private const val MenusExampleSourceUrl = "$SampleSourceUrl/MenuSamples.kt"
 val MenusExamples =
     listOf(
         Example(
             name = "MenuSample",
-            description = MenusExampleDescription,
+            description = R.string.example_menu_sample_description,
             sourceUrl = MenusExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1669,7 +1651,7 @@ val MenusExamples =
         },
         Example(
             name = "GroupedMenuSample",
-            description = MenusExampleDescription,
+            description = R.string.example_grouped_menu_sample_description,
             sourceUrl = MenusExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1677,7 +1659,7 @@ val MenusExamples =
         },
         Example(
             name = "MenuWithScrollStateSample",
-            description = MenusExampleDescription,
+            description = R.string.example_menu_with_scroll_state_sample_description,
             sourceUrl = MenusExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1685,7 +1667,7 @@ val MenusExamples =
         },
         Example(
             name = "ExposedDropdownMenuSample",
-            description = MenusExampleDescription,
+            description = R.string.example_exposed_dropdown_menu_sample_description,
             sourceUrl = MenusExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1693,7 +1675,7 @@ val MenusExamples =
         },
         Example(
             name = "EditableExposedDropdownMenuSample",
-            description = MenusExampleDescription,
+            description = R.string.example_editable_exposed_dropdown_menu_sample_description,
             sourceUrl = MenusExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1701,7 +1683,7 @@ val MenusExamples =
         },
         Example(
             name = "MultiAutocompleteExposedDropdownMenuSample",
-            description = MenusExampleDescription,
+            description = R.string.example_multi_autocomplete_exposed_dropdown_menu_sample_description,
             sourceUrl = MenusExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1709,13 +1691,12 @@ val MenusExamples =
         },
     )
 
-private const val NavigationBarExampleDescription = "Navigation bar examples"
 private const val NavigationBarExampleSourceUrl = "$SampleSourceUrl/NavigationBarSamples.kt"
 val NavigationBarExamples =
     listOf(
         Example(
             name = "ShortNavigationBarSample",
-            description = NavigationBarExampleDescription,
+            description = R.string.example_short_navigation_bar_sample_description,
             sourceUrl = NavigationBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1723,7 +1704,7 @@ val NavigationBarExamples =
         },
         Example(
             name = "ShortNavigationBarWithHorizontalItemsSample",
-            description = NavigationBarExampleDescription,
+            description = R.string.example_short_navigation_bar_with_horizontal_items_sample_description,
             sourceUrl = NavigationBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1731,7 +1712,7 @@ val NavigationBarExamples =
         },
         Example(
             name = "NavigationBarSample",
-            description = NavigationBarExampleDescription,
+            description = R.string.example_navigation_bar_sample_description,
             sourceUrl = NavigationBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1739,13 +1720,12 @@ val NavigationBarExamples =
         },
     )
 
-private const val NavigationRailExampleDescription = "Navigation rail examples"
 private const val NavigationRailExampleSourceUrl = "$SampleSourceUrl/NavigationRailSamples.kt"
 val NavigationRailExamples =
     listOf(
         Example(
             name = "WideNavigationRailResponsiveSample",
-            description = NavigationRailExampleDescription,
+            description = R.string.example_wide_navigation_rail_responsive_sample_description,
             sourceUrl = NavigationRailExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1753,7 +1733,7 @@ val NavigationRailExamples =
         },
         Example(
             name = "ModalWideNavigationRailSample",
-            description = NavigationRailExampleDescription,
+            description = R.string.example_modal_wide_navigation_rail_sample_description,
             sourceUrl = NavigationRailExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1761,7 +1741,7 @@ val NavigationRailExamples =
         },
         Example(
             name = "DismissibleModalWideNavigationRailSample",
-            description = NavigationRailExampleDescription,
+            description = R.string.example_dismissible_modal_wide_navigation_rail_sample_description,
             sourceUrl = NavigationRailExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1769,7 +1749,7 @@ val NavigationRailExamples =
         },
         Example(
             name = "WideNavigationRailCollapsedSample",
-            description = NavigationRailExampleDescription,
+            description = R.string.example_wide_navigation_rail_collapsed_sample_description,
             sourceUrl = NavigationRailExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1777,7 +1757,7 @@ val NavigationRailExamples =
         },
         Example(
             name = "WideNavigationRailExpandedSample",
-            description = NavigationRailExampleDescription,
+            description = R.string.example_wide_navigation_rail_expanded_sample_description,
             sourceUrl = NavigationRailExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1785,7 +1765,7 @@ val NavigationRailExamples =
         },
         Example(
             name = "WideNavigationRailArrangementsSample",
-            description = NavigationRailExampleDescription,
+            description = R.string.example_wide_navigation_rail_arrangements_sample_description,
             sourceUrl = NavigationRailExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1793,7 +1773,7 @@ val NavigationRailExamples =
         },
         Example(
             name = "NavigationRailSample",
-            description = NavigationRailExampleDescription,
+            description = R.string.example_navigation_rail_sample_description,
             sourceUrl = NavigationRailExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1801,7 +1781,7 @@ val NavigationRailExamples =
         },
         Example(
             name = "NavigationRailBottomAlignSample",
-            description = NavigationRailExampleDescription,
+            description = R.string.example_navigation_rail_bottom_align_sample_description,
             sourceUrl = NavigationRailExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1809,13 +1789,12 @@ val NavigationRailExamples =
         },
     )
 
-private const val NavigationDrawerExampleDescription = "Navigation drawer examples"
 private const val NavigationDrawerExampleSourceUrl = "$SampleSourceUrl/DrawerSamples.kt"
 val NavigationDrawerExamples =
     listOf(
         Example(
             name = "ModalNavigationDrawerSample",
-            description = NavigationDrawerExampleDescription,
+            description = R.string.example_modal_navigation_drawer_sample_description,
             sourceUrl = NavigationDrawerExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1823,7 +1802,7 @@ val NavigationDrawerExamples =
         },
         Example(
             name = "PermanentNavigationDrawerSample",
-            description = NavigationDrawerExampleDescription,
+            description = R.string.example_permanent_navigation_drawer_sample_description,
             sourceUrl = NavigationDrawerExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1831,7 +1810,7 @@ val NavigationDrawerExamples =
         },
         Example(
             name = "DismissibleNavigationDrawerSample",
-            description = NavigationDrawerExampleDescription,
+            description = R.string.example_dismissible_navigation_drawer_sample_description,
             sourceUrl = NavigationDrawerExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1839,14 +1818,13 @@ val NavigationDrawerExamples =
         },
     )
 
-private const val NavigationSuiteScaffoldExampleDescription = "Navigation suite scaffold examples"
 private const val NavigationSuiteScaffoldExampleSourceUrl =
     "$AdaptiveNavigationSuiteSampleSourceUrl/NavigationSuiteScaffoldSamples.kt"
 val NavigationSuiteScaffoldExamples =
     listOf(
         Example(
             name = "NavigationSuiteScaffoldSample",
-            description = NavigationSuiteScaffoldExampleDescription,
+            description = R.string.example_navigation_suite_scaffold_sample_description,
             sourceUrl = NavigationSuiteScaffoldExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1854,7 +1832,7 @@ val NavigationSuiteScaffoldExamples =
         },
         Example(
             name = "NavigationSuiteScaffoldCustomConfigSample",
-            description = NavigationSuiteScaffoldExampleDescription,
+            description = R.string.example_navigation_suite_scaffold_custom_config_sample_description,
             sourceUrl = NavigationSuiteScaffoldExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1862,14 +1840,13 @@ val NavigationSuiteScaffoldExamples =
         },
     )
 
-private const val ProgressIndicatorsExampleDescription = "Progress indicators examples"
 private const val ProgressIndicatorsExampleSourceUrl =
     "$SampleSourceUrl/" + "ProgressIndicatorSamples.kt"
 val ProgressIndicatorsExamples =
     listOf(
         Example(
             name = "LinearProgressIndicatorSample",
-            description = ProgressIndicatorsExampleDescription,
+            description = R.string.example_linear_progress_indicator_sample_description,
             sourceUrl = ProgressIndicatorsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1877,7 +1854,7 @@ val ProgressIndicatorsExamples =
         },
         Example(
             name = "LinearWavyProgressIndicatorSample",
-            description = ProgressIndicatorsExampleDescription,
+            description = R.string.example_linear_wavy_progress_indicator_sample_description,
             sourceUrl = ProgressIndicatorsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1885,7 +1862,7 @@ val ProgressIndicatorsExamples =
         },
         Example(
             name = "IndeterminateLinearProgressIndicatorSample",
-            description = ProgressIndicatorsExampleDescription,
+            description = R.string.example_indeterminate_linear_progress_indicator_sample_description,
             sourceUrl = ProgressIndicatorsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1893,7 +1870,7 @@ val ProgressIndicatorsExamples =
         },
         Example(
             name = "IndeterminateLinearWavyProgressIndicatorSample",
-            description = ProgressIndicatorsExampleDescription,
+            description = R.string.example_indeterminate_linear_wavy_progress_indicator_sample_description,
             sourceUrl = ProgressIndicatorsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1901,7 +1878,7 @@ val ProgressIndicatorsExamples =
         },
         Example(
             name = "CircularProgressIndicatorSample",
-            description = ProgressIndicatorsExampleDescription,
+            description = R.string.example_circular_progress_indicator_sample_description,
             sourceUrl = ProgressIndicatorsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1909,7 +1886,7 @@ val ProgressIndicatorsExamples =
         },
         Example(
             name = "CircularWavyProgressIndicatorSample",
-            description = ProgressIndicatorsExampleDescription,
+            description = R.string.example_circular_wavy_progress_indicator_sample_description,
             sourceUrl = ProgressIndicatorsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1917,7 +1894,7 @@ val ProgressIndicatorsExamples =
         },
         Example(
             name = "IndeterminateCircularProgressIndicatorSample",
-            description = ProgressIndicatorsExampleDescription,
+            description = R.string.example_indeterminate_circular_progress_indicator_sample_description,
             sourceUrl = ProgressIndicatorsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1925,7 +1902,7 @@ val ProgressIndicatorsExamples =
         },
         Example(
             name = "IndeterminateCircularWavyProgressIndicatorSample",
-            description = ProgressIndicatorsExampleDescription,
+            description = R.string.example_indeterminate_circular_wavy_progress_indicator_sample_description,
             sourceUrl = ProgressIndicatorsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1933,13 +1910,12 @@ val ProgressIndicatorsExamples =
         },
     )
 
-private const val PullToRefreshExampleDescription = "Pull-to-refresh examples"
 private const val PullToRefreshExampleSourceUrl = "$SampleSourceUrl/PullToRefreshSamples.kt"
 val PullToRefreshExamples =
     listOf(
         Example(
             name = "PullToRefreshSample",
-            description = PullToRefreshExampleDescription,
+            description = R.string.example_pull_to_refresh_sample_description,
             sourceUrl = PullToRefreshExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1947,7 +1923,7 @@ val PullToRefreshExamples =
         },
         Example(
             name = "PullToRefreshWithLoadingIndicatorSample",
-            description = PullToRefreshExampleDescription,
+            description = R.string.example_pull_to_refresh_with_loading_indicator_sample_description,
             sourceUrl = PullToRefreshExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -1955,7 +1931,7 @@ val PullToRefreshExamples =
         },
         Example(
             name = "PullToRefreshScalingSample",
-            description = PullToRefreshExampleDescription,
+            description = R.string.example_pull_to_refresh_scaling_sample_description,
             sourceUrl = PullToRefreshExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1963,7 +1939,7 @@ val PullToRefreshExamples =
         },
         Example(
             name = "PullToRefreshSampleCustomState",
-            description = PullToRefreshExampleDescription,
+            description = R.string.example_pull_to_refresh_sample_custom_state_description,
             sourceUrl = PullToRefreshExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1971,7 +1947,7 @@ val PullToRefreshExamples =
         },
         Example(
             name = "PullToRefreshViewModelSample",
-            description = PullToRefreshExampleDescription,
+            description = R.string.example_pull_to_refresh_view_model_sample_description,
             sourceUrl = PullToRefreshExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1979,7 +1955,7 @@ val PullToRefreshExamples =
         },
         Example(
             name = "PullToRefreshCustomIndicatorWithDefaultTransform",
-            description = PullToRefreshExampleDescription,
+            description = R.string.example_pull_to_refresh_custom_indicator_with_default_transform_description,
             sourceUrl = PullToRefreshExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -1987,13 +1963,12 @@ val PullToRefreshExamples =
         },
     )
 
-private const val RadioButtonsExampleDescription = "Radio buttons examples"
 private const val RadioButtonsExampleSourceUrl = "$SampleSourceUrl/RadioButtonSamples.kt"
 val RadioButtonsExamples =
     listOf(
         Example(
             name = "RadioButtonSample",
-            description = RadioButtonsExampleDescription,
+            description = R.string.example_radio_button_sample_description,
             sourceUrl = RadioButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2001,7 +1976,7 @@ val RadioButtonsExamples =
         },
         Example(
             name = "RadioGroupSample",
-            description = RadioButtonsExampleDescription,
+            description = R.string.example_radio_group_sample_description,
             sourceUrl = RadioButtonsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2009,13 +1984,12 @@ val RadioButtonsExamples =
         },
     )
 
-private const val SearchBarExampleDescription = "Search bar examples"
 private const val SearchBarExampleSourceUrl = "$SampleSourceUrl/SearchBarSamples.kt"
 val SearchBarExamples =
     listOf(
         Example(
             name = "SimpleSearchBarSample",
-            description = SearchBarExampleDescription,
+            description = R.string.example_simple_search_bar_sample_description,
             sourceUrl = SearchBarExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2023,7 +1997,7 @@ val SearchBarExamples =
         },
         Example(
             name = "FullScreenSearchBarScaffoldSample",
-            description = SearchBarExampleDescription,
+            description = R.string.example_full_screen_search_bar_scaffold_sample_description,
             sourceUrl = SearchBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2031,7 +2005,7 @@ val SearchBarExamples =
         },
         Example(
             name = "DockedSearchBarScaffoldSample",
-            description = SearchBarExampleDescription,
+            description = R.string.example_docked_search_bar_scaffold_sample_description,
             sourceUrl = SearchBarExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2039,13 +2013,12 @@ val SearchBarExamples =
         },
     )
 
-private const val SegmentedButtonExampleDescription = "Segmented Button examples"
 private const val SegmentedButtonSourceUrl = "$SampleSourceUrl/SegmentedButtonSamples.kt"
 val SegmentedButtonExamples =
     listOf(
         Example(
             name = "SegmentedButtonSingleSelectSample",
-            description = SegmentedButtonExampleDescription,
+            description = R.string.example_segmented_button_single_select_sample_description,
             sourceUrl = SegmentedButtonSourceUrl,
             isExpressive = false,
         ) {
@@ -2053,7 +2026,7 @@ val SegmentedButtonExamples =
         },
         Example(
             name = "SegmentedButtonMultiSelectSample",
-            description = SegmentedButtonExampleDescription,
+            description = R.string.example_segmented_button_multi_select_sample_description,
             sourceUrl = SegmentedButtonSourceUrl,
             isExpressive = false,
         ) {
@@ -2061,13 +2034,12 @@ val SegmentedButtonExamples =
         },
     )
 
-private const val ToggleButtonsExampleDescription = "ToggleButton examples"
 private const val ToggleButtonsExampleSourceUrl = "$SampleSourceUrl/ToggleButtonSamples.kt"
 val ToggleButtonsExamples =
     listOf(
         Example(
             name = "ToggleButtonSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_toggle_button_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2075,7 +2047,7 @@ val ToggleButtonsExamples =
         },
         Example(
             name = "RoundToggleButtonSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_round_toggle_button_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2083,7 +2055,7 @@ val ToggleButtonsExamples =
         },
         Example(
             name = "ElevatedToggleButtonSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_elevated_toggle_button_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2091,7 +2063,7 @@ val ToggleButtonsExamples =
         },
         Example(
             name = "TonalToggleButtonSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_tonal_toggle_button_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2099,7 +2071,7 @@ val ToggleButtonsExamples =
         },
         Example(
             name = "OutlinedToggleButtonSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_outlined_toggle_button_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2107,7 +2079,7 @@ val ToggleButtonsExamples =
         },
         Example(
             name = "ToggleButtonWithIconSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_toggle_button_with_icon_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2115,7 +2087,7 @@ val ToggleButtonsExamples =
         },
         Example(
             name = "XSmallToggleButtonWithIconSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_x_small_toggle_button_with_icon_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2123,7 +2095,7 @@ val ToggleButtonsExamples =
         },
         Example(
             name = "MediumToggleButtonWithIconSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_medium_toggle_button_with_icon_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2131,7 +2103,7 @@ val ToggleButtonsExamples =
         },
         Example(
             name = "LargeToggleButtonWithIconSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_large_toggle_button_with_icon_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2139,7 +2111,7 @@ val ToggleButtonsExamples =
         },
         Example(
             name = "XLargeToggleButtonWithIconSample",
-            description = ToggleButtonsExampleDescription,
+            description = R.string.example_x_large_toggle_button_with_icon_sample_description,
             sourceUrl = ToggleButtonsExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2147,13 +2119,12 @@ val ToggleButtonsExamples =
         },
     )
 
-private const val SlidersExampleDescription = "Sliders examples"
 private const val SlidersExampleSourceUrl = "$SampleSourceUrl/SliderSamples.kt"
 val SlidersExamples =
     listOf(
         Example(
             name = "SliderSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_slider_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2161,7 +2132,7 @@ val SlidersExamples =
         },
         Example(
             name = "StepsSliderSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_steps_slider_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2169,7 +2140,7 @@ val SlidersExamples =
         },
         Example(
             name = "SliderWithCustomThumbSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_slider_with_custom_thumb_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2177,7 +2148,7 @@ val SlidersExamples =
         },
         Example(
             name = "SliderWithCustomTrackAndThumbSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_slider_with_custom_track_and_thumb_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2185,7 +2156,7 @@ val SlidersExamples =
         },
         Example(
             name = "SliderWithTrackIconsSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_slider_with_track_icons_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2193,7 +2164,7 @@ val SlidersExamples =
         },
         Example(
             name = "CenteredSliderSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_centered_slider_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2201,7 +2172,7 @@ val SlidersExamples =
         },
         Example(
             name = "VerticalSliderSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_vertical_slider_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2209,7 +2180,7 @@ val SlidersExamples =
         },
         Example(
             name = "VerticalCenteredSliderSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_vertical_centered_slider_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = true,
         ) {
@@ -2217,7 +2188,7 @@ val SlidersExamples =
         },
         Example(
             name = "RangeSliderSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_range_slider_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2225,7 +2196,7 @@ val SlidersExamples =
         },
         Example(
             name = "StepRangeSliderSample",
-            description = SlidersExampleDescription,
+            description = R.string.example_step_range_slider_sample_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2233,7 +2204,7 @@ val SlidersExamples =
         },
         Example(
             name = "RangeSliderWithCustomComponents",
-            description = SlidersExampleDescription,
+            description = R.string.example_range_slider_with_custom_components_description,
             sourceUrl = SlidersExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2241,13 +2212,12 @@ val SlidersExamples =
         },
     )
 
-private const val SnackbarsExampleDescription = "Snackbars examples"
 private const val SnackbarsExampleSourceUrl = "$SampleSourceUrl/ScaffoldSamples.kt"
 val SnackbarsExamples =
     listOf(
         Example(
             name = "ScaffoldWithSimpleSnackbar",
-            description = SnackbarsExampleDescription,
+            description = R.string.example_scaffold_with_simple_snackbar_description,
             sourceUrl = SnackbarsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2255,7 +2225,7 @@ val SnackbarsExamples =
         },
         Example(
             name = "ScaffoldWithIndefiniteSnackbar",
-            description = SnackbarsExampleDescription,
+            description = R.string.example_scaffold_with_indefinite_snackbar_description,
             sourceUrl = SnackbarsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2263,7 +2233,7 @@ val SnackbarsExamples =
         },
         Example(
             name = "ScaffoldWithCustomSnackbar",
-            description = SnackbarsExampleDescription,
+            description = R.string.example_scaffold_with_custom_snackbar_description,
             sourceUrl = SnackbarsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2271,7 +2241,7 @@ val SnackbarsExamples =
         },
         Example(
             name = "ScaffoldWithCoroutinesSnackbar",
-            description = SnackbarsExampleDescription,
+            description = R.string.example_scaffold_with_coroutines_snackbar_description,
             sourceUrl = SnackbarsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2279,7 +2249,7 @@ val SnackbarsExamples =
         },
         Example(
             name = "ScaffoldWithMultilineSnackbar",
-            description = SnackbarsExampleDescription,
+            description = R.string.example_scaffold_with_multiline_snackbar_description,
             sourceUrl = SnackbarsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2287,13 +2257,12 @@ val SnackbarsExamples =
         },
     )
 
-private const val SplitButtonExampleDescription = "Split Button examples"
 private const val SplitButtonSourceUrl = "$SampleSourceUrl/SplitButtonSamples.kt"
 val SplitButtonExamples =
     listOf(
         Example(
             name = "FilledSplitButtonSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_filled_split_button_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2301,7 +2270,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "SplitButtonWithUnCheckableTrailingButtonSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_split_button_with_un_checkable_trailing_button_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2309,7 +2278,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "SplitButtonWithDropdownMenuSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_split_button_with_dropdown_menu_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2317,7 +2286,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "TonalSplitButtonSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_tonal_split_button_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2325,7 +2294,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "ElevatedSplitButtonSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_elevated_split_button_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2333,7 +2302,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "OutlinedSplitButtonSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_outlined_split_button_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2341,7 +2310,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "SplitButtonWithTextSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_split_button_with_text_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2349,7 +2318,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "SplitButtonWithIconSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_split_button_with_icon_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2357,7 +2326,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "XSmallFilledSplitButtonSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_x_small_filled_split_button_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2365,7 +2334,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "MediumFilledSplitButtonSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_medium_filled_split_button_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2373,7 +2342,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "LargeFilledSplitButtonSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_large_filled_split_button_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2381,7 +2350,7 @@ val SplitButtonExamples =
         },
         Example(
             name = "ExtraLargeFilledSplitButtonSample",
-            description = SplitButtonExampleDescription,
+            description = R.string.example_extra_large_filled_split_button_sample_description,
             sourceUrl = SplitButtonSourceUrl,
             isExpressive = true,
         ) {
@@ -2389,13 +2358,12 @@ val SplitButtonExamples =
         },
     )
 
-private const val SwitchExampleDescription = "Switch examples"
 private const val SwitchExampleSourceUrl = "$SampleSourceUrl/SwitchSamples.kt"
 val SwitchExamples =
     listOf(
         Example(
             name = "SwitchSample",
-            description = SwitchExampleDescription,
+            description = R.string.example_switch_sample_description,
             sourceUrl = SwitchExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2403,7 +2371,7 @@ val SwitchExamples =
         },
         Example(
             name = "SwitchWithThumbIconSample",
-            description = SwitchExampleDescription,
+            description = R.string.example_switch_with_thumb_icon_sample_description,
             sourceUrl = SwitchExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2411,13 +2379,12 @@ val SwitchExamples =
         },
     )
 
-private const val TabsExampleDescription = "Tabs examples"
 private const val TabsExampleSourceUrl = "$SampleSourceUrl/TabSamples.kt"
 val TabsExamples =
     listOf(
         Example(
             name = "PrimaryTextTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_primary_text_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2425,7 +2392,7 @@ val TabsExamples =
         },
         Example(
             name = "PrimaryIconTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_primary_icon_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2433,7 +2400,7 @@ val TabsExamples =
         },
         Example(
             name = "SecondaryTextTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_secondary_text_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2441,7 +2408,7 @@ val TabsExamples =
         },
         Example(
             name = "SecondaryIconTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_secondary_icon_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2449,7 +2416,7 @@ val TabsExamples =
         },
         Example(
             name = "TextAndIconTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_text_and_icon_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2457,7 +2424,7 @@ val TabsExamples =
         },
         Example(
             name = "LeadingIconTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_leading_icon_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2465,7 +2432,7 @@ val TabsExamples =
         },
         Example(
             name = "ScrollingPrimaryTextTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_scrolling_primary_text_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2473,7 +2440,7 @@ val TabsExamples =
         },
         Example(
             name = "ScrollingSecondaryTextTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_scrolling_secondary_text_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2481,7 +2448,7 @@ val TabsExamples =
         },
         Example(
             name = "FancyTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_fancy_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2489,7 +2456,7 @@ val TabsExamples =
         },
         Example(
             name = "FancyIndicatorTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_fancy_indicator_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2497,7 +2464,7 @@ val TabsExamples =
         },
         Example(
             name = "FancyIndicatorContainerTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_fancy_indicator_container_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2505,7 +2472,7 @@ val TabsExamples =
         },
         Example(
             name = "ScrollingFancyIndicatorContainerTabs",
-            description = TabsExampleDescription,
+            description = R.string.example_scrolling_fancy_indicator_container_tabs_description,
             sourceUrl = TabsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2519,7 +2486,7 @@ val TimePickerExamples =
     listOf(
         Example(
             name = "TimePickerSample",
-            description = TimePickerDescription,
+            description = R.string.example_time_picker_sample_description,
             sourceUrl = TimePickerSourceUrl,
             isExpressive = false,
         ) {
@@ -2527,7 +2494,7 @@ val TimePickerExamples =
         },
         Example(
             name = "TimeInputSample",
-            description = TimePickerDescription,
+            description = R.string.example_time_input_sample_description,
             sourceUrl = TimePickerSourceUrl,
             isExpressive = false,
         ) {
@@ -2535,7 +2502,7 @@ val TimePickerExamples =
         },
         Example(
             name = "TimePickerSwitchableSample",
-            description = TimePickerDescription,
+            description = R.string.example_time_picker_switchable_sample_description,
             sourceUrl = TimePickerSourceUrl,
             isExpressive = false,
         ) {
@@ -2543,13 +2510,12 @@ val TimePickerExamples =
         },
     )
 
-private const val TextFieldsExampleDescription = "Text fields examples"
 private const val TextFieldsExampleSourceUrl = "$SampleSourceUrl/TextFieldSamples.kt"
 val TextFieldsExamples =
     listOf(
             Example(
                 name = "SimpleTextFieldSample",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_simple_text_field_sample_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2557,7 +2523,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "TextFieldWithInitialValueAndSelection",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_text_field_with_initial_value_and_selection_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2565,7 +2531,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "SimpleOutlinedTextFieldSample",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_simple_outlined_text_field_sample_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2573,7 +2539,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "OutlinedTextFieldWithInitialValueAndSelection",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_outlined_text_field_with_initial_value_and_selection_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2581,7 +2547,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "TextFieldWithTransformations",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_text_field_with_transformations_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2589,7 +2555,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "TextFieldWithIcons",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_text_field_with_icons_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2597,7 +2563,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "TextFieldWithPlaceholder",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_text_field_with_placeholder_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2605,7 +2571,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "TextFieldWithPrefixAndSuffix",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_text_field_with_prefix_and_suffix_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2613,7 +2579,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "TextFieldWithErrorState",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_text_field_with_error_state_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2621,7 +2587,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "TextFieldWithSupportingText",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_text_field_with_supporting_text_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2629,7 +2595,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "DenseTextFieldContentPadding",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_dense_text_field_content_padding_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2637,7 +2603,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "PasswordTextField",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_password_text_field_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2645,7 +2611,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "TextFieldWithHideKeyboardOnImeAction",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_text_field_with_hide_keyboard_on_ime_action_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2653,7 +2619,7 @@ val TextFieldsExamples =
             },
             Example(
                 name = "TextArea",
-                description = TextFieldsExampleDescription,
+                description = R.string.example_text_area_description,
                 sourceUrl = TextFieldsExampleSourceUrl,
                 isExpressive = false,
             ) {
@@ -2668,13 +2634,12 @@ val TextFieldsExamples =
             it.copy(content = { Box(Modifier.wrapContentWidth().width(280.dp)) { it.content() } })
         }
 
-private const val TooltipsExampleDescription = "Tooltips examples"
 private const val TooltipsExampleSourceUrl = "$SampleSourceUrl/TooltipSamples.kt"
 val TooltipsExamples =
     listOf(
         Example(
             name = "PlainTooltipSample",
-            description = TooltipsExampleDescription,
+            description = R.string.example_plain_tooltip_sample_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2682,7 +2647,7 @@ val TooltipsExamples =
         },
         Example(
             name = "PlainTooltipWithManualInvocationSample",
-            description = TooltipsExampleDescription,
+            description = R.string.example_plain_tooltip_with_manual_invocation_sample_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2690,7 +2655,7 @@ val TooltipsExamples =
         },
         Example(
             name = "PlainTooltipWithCaret",
-            description = TooltipsExampleDescription,
+            description = R.string.example_plain_tooltip_with_caret_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2698,7 +2663,7 @@ val TooltipsExamples =
         },
         Example(
             name = "PlainTooltipWithCaretBelowAnchor",
-            description = TooltipsExampleDescription,
+            description = R.string.example_plain_tooltip_with_caret_below_anchor_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2706,7 +2671,7 @@ val TooltipsExamples =
         },
         Example(
             name = "PlainTooltipWithCaretLeftOfAnchor",
-            description = TooltipsExampleDescription,
+            description = R.string.example_plain_tooltip_with_caret_left_of_anchor_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2714,7 +2679,7 @@ val TooltipsExamples =
         },
         Example(
             name = "PlainTooltipWithCaretRightOfAnchor",
-            description = TooltipsExampleDescription,
+            description = R.string.example_plain_tooltip_with_caret_right_of_anchor_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2722,7 +2687,7 @@ val TooltipsExamples =
         },
         Example(
             name = "PlainTooltipWithCaretStartOfAnchor",
-            description = TooltipsExampleDescription,
+            description = R.string.example_plain_tooltip_with_caret_start_of_anchor_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2730,7 +2695,7 @@ val TooltipsExamples =
         },
         Example(
             name = "PlainTooltipWithCaretEndOfAnchor",
-            description = TooltipsExampleDescription,
+            description = R.string.example_plain_tooltip_with_caret_end_of_anchor_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2738,7 +2703,7 @@ val TooltipsExamples =
         },
         Example(
             name = "PlainTooltipWithCustomCaret",
-            description = TooltipsExampleDescription,
+            description = R.string.example_plain_tooltip_with_custom_caret_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2746,7 +2711,7 @@ val TooltipsExamples =
         },
         Example(
             name = "RichTooltipSample",
-            description = TooltipsExampleDescription,
+            description = R.string.example_rich_tooltip_sample_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2754,7 +2719,7 @@ val TooltipsExamples =
         },
         Example(
             name = "RichTooltipWithManualInvocationSample",
-            description = TooltipsExampleDescription,
+            description = R.string.example_rich_tooltip_with_manual_invocation_sample_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2762,7 +2727,7 @@ val TooltipsExamples =
         },
         Example(
             name = "RichTooltipWithCaretSample",
-            description = TooltipsExampleDescription,
+            description = R.string.example_rich_tooltip_with_caret_sample_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2770,7 +2735,7 @@ val TooltipsExamples =
         },
         Example(
             name = "RichTooltipWithCustomCaretSample",
-            description = TooltipsExampleDescription,
+            description = R.string.example_rich_tooltip_with_custom_caret_sample_description,
             sourceUrl = TooltipsExampleSourceUrl,
             isExpressive = false,
         ) {
@@ -2782,7 +2747,7 @@ val MaterialShapesExamples =
     listOf(
         Example(
             name = "ShapesSample",
-            description = "Material shapes examples",
+            description = R.string.example_shapes_sample_description,
             sourceUrl = "$SampleSourceUrl/MaterialShapesSamples.kt",
             isExpressive = true,
         ) {
@@ -2794,7 +2759,7 @@ val SwipeToDismissExamples =
     listOf(
         Example(
             name = "SwipeToDismiss",
-            description = "Swipe to dismiss examples",
+            description = R.string.example_swipe_to_dismiss_description,
             sourceUrl = "$SampleSourceUrl/SwipeToDismissSamples.kt",
             isExpressive = true,
         ) {

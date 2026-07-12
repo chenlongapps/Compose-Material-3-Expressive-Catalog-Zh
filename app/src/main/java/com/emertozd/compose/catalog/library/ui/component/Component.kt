@@ -132,7 +132,6 @@ fun Component(
                 items(filteredExamples) { example ->
                     ExampleItem(
                         example = example,
-                        componentName = component.localizedName(),
                         markExpressiveComponents = theme.markExpressiveComponents,
                         onClick = onExampleClick,
                     )
