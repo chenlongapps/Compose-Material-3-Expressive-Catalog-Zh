@@ -11,6 +11,23 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class LocalizationResourcesTest {
     @Test
+    fun exampleCopyStringsResolveInBothLanguages() {
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        for ((languageTag, expectedStrings) in
+            listOf(
+                "en" to listOf("Copy example name", "Example name copied"),
+                "zh-Hans" to listOf("复制示例名称", "已复制示例名称"),
+            )) {
+            val configuration = Configuration(context.resources.configuration)
+            configuration.setLocales(LocaleList.forLanguageTags(languageTag))
+            val localizedContext = context.createConfigurationContext(configuration)
+
+            assertEquals(expectedStrings[0], localizedContext.getString(R.string.copy_example_name))
+            assertEquals(expectedStrings[1], localizedContext.getString(R.string.example_name_copied))
+        }
+    }
+
+    @Test
     fun simplifiedChineseResourcesResolveCatalogAndSampleText() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val configuration = Configuration(context.resources.configuration)

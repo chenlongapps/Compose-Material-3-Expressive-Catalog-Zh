@@ -7,6 +7,8 @@
     <string name="experimental">实验性</string>
     <string name="examples">示例</string>
     <string name="no_examples">暂无示例</string>
+    <string name="copy_example_name">复制示例名称</string>
+    <string name="example_name_copied">已复制示例名称</string>
     <string name="expressive_badge">表现力</string>
     <string name="unofficial">非官方</string>
 
